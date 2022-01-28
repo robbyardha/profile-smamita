@@ -18,7 +18,7 @@
                                     <li><a href="#">Kesiswaan</a></li>
                                     <li><a href="#">Kurikulum</a></li>
                                     <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">Team</a></li>
+                                    <li><a href="<?= base_url('information/teams') ?>">Team</a></li>
                                     <li><a href="#">Announcement</a></li>
                                 </ul>
                             </li>
@@ -105,18 +105,41 @@
                     </div>
                     <nav class="appseo-mobile-main-navigation  clearfix ul-li">
                         <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-                            <li><a href="#" target="_blank">Home</a></li>
+                            <li><a href="#">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#">Information</a>
+                                <ul class="dropdown-menu clearfix">
+                                    <li><a href="#">Kesiswaan</a></li>
+                                    <li><a href="#">Kurikulum</a></li>
+                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Announcement</a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#">SIMANIS</a>
+                                <ul class="dropdown-menu clearfix">
+                                    <li><a href="#">SIMANIS</a></li>
+                                    <li><a href="#">EXAM 10</a></li>
+                                    <li><a href="#">EXAM 11</a></li>
+                                    <li><a href="#">EXAM 12</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">PPDB</a></li>
                             <li class="dropdown">
                                 <a href="#">About</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a target="_blank" href="#">Facilities</a></li>
-                                    <li><a target="_blank" href="#">Extracurricular</a></li>
+                                    <li><a href="#">President</a></li>
+                                    <li><a href="#">Profile</a></li>
+                                    <li><a href="#">Visi Misi</a></li>
+                                    <li><a href="#">EXAM 12</a></li>
+                                    <li><a href="#">Facilities</a></li>
+                                    <li><a href="#">Extracurricular</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#" target="_blank">Gallery</a></li>
-                            <li><a href="#" target="_blank">Team</a></li>
-                            <li><a href="#" target="_blank">News</a></li>
-                            <li><a href="#" target="_blank">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

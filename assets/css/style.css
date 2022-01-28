@@ -9081,7 +9081,7 @@ Sticky Menu
 
 .saas_two_main_header .s2-main-navigation .navbar-nav li .active,
 .saas_two_main_header .s2-main-navigation .navbar-nav li a:hover {
-	color: #d10edd;
+	color: #ff7c2f;
 }
 
 .saas_two_main_header .s2-main-navigation .navbar-nav li a:hover:before,
@@ -9094,7 +9094,7 @@ Sticky Menu
 	position: absolute;
 	height: 2px;
 	width: 0%;
-	background-color: #d10edd;
+	background-color: #ff7c2f;
 	left: 2px;
 	transition: 0.3s all ease-in-out;
 	bottom: 25px;
@@ -9115,16 +9115,16 @@ Sticky Menu
 }
 
 .saas_two_main_header .s2-main-navigation .dropdown:hover:after {
-	color: #d10edd;
+	color: #ff7c2f;
 }
 
 .saas_two_main_header .saas_sign_up_btn {
 	height: 55px;
-	width: 175px;
+	width: 160px;
 	float: right;
 	line-height: 55px;
 	border-radius: 30px;
-	background-color: #73299a;
+	background-color: #ff7c2f;
 }
 
 .saas_two_main_header .saas_sign_up_btn a {
@@ -9194,7 +9194,7 @@ Sticky Menu
 	position: absolute;
 	border-radius: 100%;
 	transform: scale(0);
-	background-color: #73299a;
+	background-color: #ff7c2f;
 	transition: 0.3s all ease-in-out;
 }
 
@@ -10575,7 +10575,7 @@ Sticky Menu
 	right: 0;
 	cursor: pointer;
 	line-height: 40px;
-	color: #73299a;
+	color: #ff7c2f;
 	text-align: center;
 	font-size: 30px;
 	top: -40px;
@@ -16106,7 +16106,7 @@ div#preloader {
 
 /*** Start Of blog Section ***/
 .saasio-breadcurmb-section {
-	background-color: #6c2b95;
+	background-color: #b32a00;
 	padding: 260px 0px 150px
 }
 
