@@ -17,11 +17,21 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/odometer-theme-default.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/side-demo.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
-    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lightgallery.css" />
 
-    <!-- lightgallery plugins -->
-    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lg-zoom.css" />
-    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lg-thumbnail.css" />
 
-    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lightgallery-bundle.css" />
+    <!-- PHOTOSWIPE -->
+    <!-- Core CSS file -->
+    <link rel="stylesheet" href="<?= base_url('assets/photoswipe/') ?>photoswipe.css">
+
+    <!-- Skin CSS file (styling of UI - buttons, caption, etc.)
+     In the folder of skin CSS file there are also:
+     - .png and .svg icons sprite, 
+     - preloader.gif (for browsers that do not support CSS animations) -->
+    <link rel="stylesheet" href="<?= base_url('assets/photoswipe/') ?>default-skin/default-skin.css">
+
+    <!-- Core JS file -->
+    <script src="<?= base_url('assets/photoswipe/') ?>photoswipe.min.js"></script>
+
+    <!-- UI JS file -->
+    <script src="<?= base_url('assets/photoswipe/') ?>photoswipe-ui-default.min.js"></script>
 </head>
