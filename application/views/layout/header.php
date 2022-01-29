@@ -17,4 +17,11 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/odometer-theme-default.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/side-demo.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lightgallery.css" />
+
+    <!-- lightgallery plugins -->
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lg-zoom.css" />
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lg-thumbnail.css" />
+
+    <link type="text/css" rel="stylesheet" href="<?= base_url('assets/plugin/lightgallery/') ?>css/lightgallery-bundle.css" />
 </head>
