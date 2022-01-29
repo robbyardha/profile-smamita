@@ -12,7 +12,7 @@ class Contact extends CI_Controller
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
-        $this->load->view('information/teams', $data);
+        $this->load->view('contact/index', $data);
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
