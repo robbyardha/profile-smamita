@@ -15,11 +15,11 @@
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="#">Kesiswaan</a></li>
-                                    <li><a href="#">Kurikulum</a></li>
-                                    <li><a href="#">Gallery</a></li>
+                                    <li><a href="<?= base_url('information/kesiswaan') ?>">Kesiswaan</a></li>
+                                    <li><a href="<?= base_url('information/kurikulum') ?>">Kurikulum</a></li>
+                                    <li><a href="<?= base_url('information/gallery') ?>">Gallery</a></li>
                                     <li><a href="<?= base_url('information/teams') ?>">Team</a></li>
-                                    <li><a href="#">Announcement</a></li>
+                                    <li><a href="<?= base_url('information/announcement') ?>">Announcement</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -37,11 +37,11 @@
                             <li class="dropdown">
                                 <a href="#">About</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="#president">President</a></li>
-                                    <li><a href="#profile">Profile</a></li>
-                                    <li><a href="#visimisi">Visi Misi</a></li>
-                                    <li><a href="#">Facilities</a></li>
-                                    <li><a href="#">Extracurricular</a></li>
+                                    <li><a href="<?= base_url('home') ?>#president">President</a></li>
+                                    <li><a href="<?= base_url('home') ?>#profile">Profile</a></li>
+                                    <li><a href="<?= base_url('home') ?>#visimisi">Visi Misi</a></li>
+                                    <li><a href="<?= base_url('facilities') ?>">Facilities</a></li>
+                                    <li><a href="<?= base_url('extracurricular') ?>">Extracurricular</a></li>
                                 </ul>
                             </li>
 
@@ -109,11 +109,11 @@
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="#">Kesiswaan</a></li>
-                                    <li><a href="#">Kurikulum</a></li>
-                                    <li><a href="#">Gallery</a></li>
-                                    <li><a href="#">Team</a></li>
-                                    <li><a href="#">Announcement</a></li>
+                                    <li><a href="<?= base_url('information/kesiswaan') ?>">Kesiswaan</a></li>
+                                    <li><a href="<?= base_url('information/kurikulum') ?>">Kurikulum</a></li>
+                                    <li><a href="<?= base_url('information/gallery') ?>">Gallery</a></li>
+                                    <li><a href="<?= base_url('information/teams') ?>">Team</a></li>
+                                    <li><a href="<?= base_url('information/announcement') ?>">Announcement</a></li>
 
                                 </ul>
                             </li>
@@ -127,17 +127,16 @@
                                 </ul>
                             </li>
                             <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="<?= base_url('contact') ?>">Contact</a></li>
                             <li><a href="#">PPDB</a></li>
                             <li class="dropdown">
                                 <a href="#">About</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="#">President</a></li>
-                                    <li><a href="#">Profile</a></li>
-                                    <li><a href="#">Visi Misi</a></li>
-                                    <li><a href="#">EXAM 12</a></li>
-                                    <li><a href="#">Facilities</a></li>
-                                    <li><a href="#">Extracurricular</a></li>
+                                    <li><a href="<?= base_url('home') ?>#president">President</a></li>
+                                    <li><a href="<?= base_url('home') ?>#profile">Profile</a></li>
+                                    <li><a href="<?= base_url('home') ?>#visimisi">Visi Misi</a></li>
+                                    <li><a href="<?= base_url('facilities') ?>">Facilities</a></li>
+                                    <li><a href="<?= base_url('extracurricular') ?>">Extracurricular</a></li>
                                 </ul>
                             </li>
                         </ul>

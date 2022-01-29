@@ -23,12 +23,16 @@
                 <div class="col-lg-3">
                     <div class="appseo-footer-widget">
                         <div class="appseo-footer-menu-widget ul-li-block">
-                            <h3 class="appseo-widget-title">Services</h3>
+                            <h3 class="appseo-widget-title">Navigation</h3>
                             <ul>
-                                <li><a href="#">Link Building Services</a></li>
-                                <li><a href="#">App Optimization</a></li>
-                                <li><a href="#">Social Media Marketing</a></li>
-                                <li><a href="#">Dubai SEO</a></li>
+                                <li><a href="#">Kesiswaan</a></li>
+                                <li><a href="#">Kurikulum</a></li>
+                                <li><a href="#">Gallery</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Announcement</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">PPDB</a></li>
                             </ul>
                         </div>
                     </div>
@@ -36,12 +40,13 @@
                 <div class="col-lg-3">
                     <div class="appseo-footer-widget">
                         <div class="appseo-footer-menu-widget ul-li-block">
-                            <h3 class="appseo-widget-title">Quick Links</h3>
+                            <h3 class="appseo-widget-title">Quick Profile</h3>
                             <ul>
-                                <li><a href="#">Contact Us</a></li>
-                                <li><a href="#">Clients FAQs</a></li>
-                                <li><a href="#">Blog News</a></li>
-                                <li><a href="#">Pricing Planes</a></li>
+                                <li><a href="#">President</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Vision & Mission</a></li>
+                                <li><a href="#">Facilities</a></li>
+                                <li><a href="#">Extracurricular</a></li>
                             </ul>
                         </div>
                     </div>

@@ -1,16 +1,22 @@
-<div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-</div>
+<section id="saasio-breadcurmb" class="saasio-breadcurmb-section">
+    <div class="container">
+        <div class="breadcurmb-title text-center">
+            <h2>Team</h2>
+        </div>
+        <div class="breadcurmb-item-list text-center ul-li">
+            <ul class="saasio-page-breadcurmb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Team</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
 <!-- End of breadcurmb section
         ============================================= -->
 
 <!-- Start of team section
         ============================================= -->
-<section id="sa-team-inner" class="sa-team-inner-section inner-page-padding mt-4">
+<section id="sa-team-inner" class="sa-team-inner-section inner-page-padding">
     <div class="container">
         <div class="sa-team-=inner-contenb">
             <div class="row">
