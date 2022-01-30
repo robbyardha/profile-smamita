@@ -235,3 +235,49 @@
     </div>
 </section>
 <!-- Visi misi -->
+
+<br>
+<div class="float-right">
+
+    <svg viewBox="0 0 36 36" fill="none" role="img" xmlns="http://www.w3.org/2000/svg" width="80" height="80">
+        <title>SMILE</title>
+        <mask id="mask__beam" maskUnits="userSpaceOnUse" x="0" y="0" width="36" height="36">
+            <rect width="36" height="36" rx="72" fill="#FFFFFF"></rect>
+        </mask>
+        <g mask="url(#mask__beam)">
+            <rect width="36" height="36" fill="#ffa927"></rect>
+            <rect x="0" y="0" width="36" height="36" transform="translate(5 -1) rotate(155 18 18) scale(1.2)" fill="#fc580c" rx="6"></rect>
+            <g transform="translate(3 -4) rotate(-5 18 18)">
+                <path d="M15 21c2 1 4 1 6 0" stroke="#000000" fill="none" stroke-linecap="round"></path>
+                <rect x="14" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#000000"></rect>
+                <rect x="20" y="14" width="1.5" height="2" rx="1" stroke="none" fill="#000000"></rect>
+            </g>
+        </g>
+    </svg>
+</div>
+
+<section id="location">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h2>Our Location</h2>
+        </div>
+
+        <div class="row my-3">
+            <div class="col-lg col-md embed-responsive embed-responsive-16by9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.0582098781024!2d112.69992791376477!3d-7.347360694697842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fcb28a69137d%3A0xf27af3f90cbf362a!2sSMA%20Muhammadiyah%201%20Taman%20-%20Sidoarjo!5e0!3m2!1sid!2sid!4v1643486568138!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="d-flex mt-2">
+    <!-- <img class="img-fuid" src="<?= base_url('assets/img/layered.svg') ?>" width="1500" alt="" srcset=""> -->
+    <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                <stop stop-color="rgba(25, 29, 66, 1)" offset="0%"></stop>
+                <stop stop-color="rgba(100.325, 107.595, 180.293, 1)" offset="100%"></stop>
+            </linearGradient>
+        </defs>
+        <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,98L30,106.2C60,114,120,131,180,138.8C240,147,300,147,360,163.3C420,180,480,212,540,220.5C600,229,660,212,720,187.8C780,163,840,131,900,147C960,163,1020,229,1080,228.7C1140,229,1200,163,1260,179.7C1320,196,1380,294,1440,277.7C1500,261,1560,131,1620,98C1680,65,1740,131,1800,130.7C1860,131,1920,65,1980,106.2C2040,147,2100,294,2160,351.2C2220,408,2280,376,2340,359.3C2400,343,2460,343,2520,351.2C2580,359,2640,376,2700,392C2760,408,2820,425,2880,416.5C2940,408,3000,376,3060,367.5C3120,359,3180,376,3240,334.8C3300,294,3360,196,3420,147C3480,98,3540,98,3600,138.8C3660,180,3720,261,3780,253.2C3840,245,3900,147,3960,155.2C4020,163,4080,278,4140,334.8C4200,392,4260,392,4290,392L4320,392L4320,490L4290,490C4260,490,4200,490,4140,490C4080,490,4020,490,3960,490C3900,490,3840,490,3780,490C3720,490,3660,490,3600,490C3540,490,3480,490,3420,490C3360,490,3300,490,3240,490C3180,490,3120,490,3060,490C3000,490,2940,490,2880,490C2820,490,2760,490,2700,490C2640,490,2580,490,2520,490C2460,490,2400,490,2340,490C2280,490,2220,490,2160,490C2100,490,2040,490,1980,490C1920,490,1860,490,1800,490C1740,490,1680,490,1620,490C1560,490,1500,490,1440,490C1380,490,1320,490,1260,490C1200,490,1140,490,1080,490C1020,490,960,490,900,490C840,490,780,490,720,490C660,490,600,490,540,490C480,490,420,490,360,490C300,490,240,490,180,490C120,490,60,490,30,490L0,490Z"></path>
+    </svg>
+</div>

@@ -14,6 +14,12 @@
     <div class="container">
         <div class="sa-team-=inner-contenb">
             <div class="row">
+                <div class="col text-center">
+                    <div class="alert alert-success" role="alert">
+                        Coming Soon
+                    </div>
+                </div>
+                <!-- 
                 <div class="col-lg-3 col-md-6">
                     <div class="sa-team-inner-inner-box">
                         <div class="str-team-img-text position-relative">
@@ -287,7 +293,7 @@
                     <li><a href="#">...</a></li>
                     <li><a href="#">10</a></li>
                 </ul>
+            </div> -->
             </div>
         </div>
-    </div>
 </section>

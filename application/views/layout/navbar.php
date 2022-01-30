@@ -32,8 +32,7 @@
                                 </ul>
                             </li>
                             <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">PPDB</a></li>
+                            <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li class="dropdown">
                                 <a href="#">About</a>
                                 <ul class="dropdown-menu clearfix">
@@ -84,7 +83,7 @@
                     </div>
                     <!-- /sidebar -->
                     <div class="header-button text-center appseo-btn-hover text-uppercase">
-                        <a href="#">Contact us</a>
+                        <a href="https://wa.me/6281319457080?text=Assalammu'alaikum%20Wr.Wb%20Saya%20ingin%20bertanya%20tantang%20SMAM1TA%20">Contact us</a>
                     </div>
                 </div>
             </div>
@@ -127,8 +126,7 @@
                                 </ul>
                             </li>
                             <li><a href="#">News</a></li>
-                            <li><a href="<?= base_url('contact') ?>">Contact</a></li>
-                            <li><a href="#">PPDB</a></li>
+                            <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li class="dropdown">
                                 <a href="#">About</a>
                                 <ul class="dropdown-menu clearfix">

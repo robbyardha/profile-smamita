@@ -10,53 +10,28 @@
     <h3 class="text-center my-3">Gallery</h3>
     <div class="card-columns">
         <div id="btn" class="card">
-            <img class="rounded" src="https://source.unsplash.com/daily?nature" alt="Card image top">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/musik.JPG') ?>" alt="Music SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" alt="Card image top">
+        <div id="btn1" class="card">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/award.PNG') ?>" alt=" SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
+        <div id="btn2" class="card">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/award2.PNG') ?>" alt=" SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
+        <div id="btn3" class="card">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/mc.PNG') ?>" alt=" SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
+        <div id="btn4" class="card">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/pict.PNG') ?>" alt=" SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
+        <div id="btn5" class="card">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/prestasi.PNG') ?>" alt=" SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
+        <div id="btn6" class="card">
+            <img class="rounded img-fluid" src="<?= base_url('assets/img/prestasi2.PNG') ?>" alt=" SMAM1TA">
         </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
-        <div id="btn" class="card">
-            <img class="rounded" src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" alt="Card image top">
-        </div>
+
+
     </div>
 
 </div>

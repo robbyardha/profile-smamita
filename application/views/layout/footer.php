@@ -26,21 +26,45 @@
 
         // build items array
         var items = [{
-                src: 'https://source.unsplash.com/daily?nature',
-                w: 964,
-                h: 1024
+                src: '<?= base_url() ?>assets/img/musik.JPG',
+                w: 1080,
+                h: 720
             },
             {
-                src: 'https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg',
+                src: '<?= base_url() ?>assets/img/award.PNG',
+                w: 1080,
+                h: 720
+            },
+            {
+
+                src: '<?= base_url() ?>assets/img/award2.PNG',
+                w: 353,
+                h: 479
+            },
+            {
+
+                src: '<?= base_url() ?>assets/img/mc.PNG',
+                w: 353,
+                h: 479
+            },
+            {
+
+                src: '<?= base_url() ?>assets/img/pict.PNG',
+                w: 353,
+                h: 479
+            },
+            {
+
+                src: '<?= base_url() ?>assets/img/prestasi.PNG',
                 w: 1024,
                 h: 683
             },
             {
 
-                src: 'https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg',
+                src: '<?= base_url() ?>assets/img/prestasi2.PNG',
                 w: 1024,
                 h: 683
-            }
+            },
         ];
 
         // define options (if needed)
@@ -61,6 +85,12 @@
     // openPhotoSwipe();
 
     document.getElementById('btn').onclick = openPhotoSwipe;
+    document.getElementById('btn1').onclick = openPhotoSwipe;
+    document.getElementById('btn2').onclick = openPhotoSwipe;
+    document.getElementById('btn3').onclick = openPhotoSwipe;
+    document.getElementById('btn4').onclick = openPhotoSwipe;
+    document.getElementById('btn5').onclick = openPhotoSwipe;
+    document.getElementById('btn6').onclick = openPhotoSwipe;
 </script>
 
 </body>
