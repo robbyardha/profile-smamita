@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/responsive.bootstrap5.min.css" />
 
-
+    
     <!-- Page CSS -->
 
     <!-- Helpers -->

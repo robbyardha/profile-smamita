@@ -3,7 +3,10 @@
 
     <div class="container-xxl flex-grow-1 container-p-y">
         <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Published /</span> News</h4>
+        <?php
 
+        use Html2Text\Html2Text;
+        ?>
 
         <?php if ($this->session->flashdata('message')) : ?>
             <div class="alert alert-success alert-dismissible" role="alert">
@@ -35,13 +38,14 @@
 
             <div class="card-body">
                 <div class="table-responsive text-nowrap py-2 px-2">
-                    <table class="table table-striped dt-responsive nowrap py-2 px-2">
+                    <table class="table table-striped dt-responsive datatables nowrap py-2 px-2">
                         <thead>
                             <tr>
                                 <th>No</th>
                                 <th>Headline</th>
                                 <th>Kategori</th>
                                 <th>Penulis</th>
+                                <th>Waktu Publikasi</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -59,8 +63,10 @@
                                     <td><?= $pn['headline'] ?></td>
                                     <td><?= $pn['kategori'] ?></td>
                                     <td><?= $pn['penulis'] ?></td>
+                                    <td><?= $pn['tanggal_publikasi'] . " " . $pn['jam_publikasi'] ?></td>
                                     <td>
-                                        <a href="#" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detail_modal<?= $pn['id'] ?>">Detail</a>
+                                        <!-- <a href="#" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detail_modal<?= $pn['id'] ?>">Details</a> -->
+                                        <a href="<?= base_url('berita/detail/') . $pn['id'] ?>" class="btn btn-sm btn-info">Detail</a>
                                         <a href="<?= base_url('berita/ubah/') . $pn['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                         <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapus_modal<?= $pn['id'] ?>">Hapus</a>
                                     </td>
@@ -119,10 +125,19 @@
 
                                                 <div class="row g-2">
                                                     <div class="col mb-3">
+                                                        <?php
+                                                        require_once("./vendor/html2text/html2text/src/Html2Text.php");
+                                                        // require_once("./vendor/html2text/html2text/src/Html2Text.php");
+                                                        // use Html2Text\Html2Text;
+                                                        // $html = new \Html2Text\Html2Text('Hello, &quot;<b>world</b>&quot;');
+                                                        $html_convert = new \Html2Text\Html2Text($pn['konten']);
+
+                                                        // echo $html_convert->getText();
+                                                        // Hello, "WORLD"
+                                                        ?>
                                                         <label for="desc" class="form-label">Konten</label>
-                                                        <textarea name="" id="" cols="30" rows="10" class="form-control" readonly><?= $pn['konten'] ?></textarea>
-
-
+                                                        <!-- <input type="text" name="" id="" value="<?= $html_convert->getText() ?>"> -->
+                                                        <textarea name="" id="" cols="30" rows="10" class="form-control ckeditor" readonly><?= $html_convert->getText() ?></textarea>
                                                     </div>
                                                 </div>
                                             </div>

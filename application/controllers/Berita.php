@@ -18,6 +18,8 @@ class Berita extends CI_Controller
 
     public function index()
     {
+        // var_dump($this->session->userdata());
+        // die;
         $data['title'] = "Berita";
         $data['berita'] = $this->Berita_model->get_berita();
         // var_dump($data['join_buku_new']);
@@ -33,8 +35,8 @@ class Berita extends CI_Controller
     public function tambah()
     {
         $this->form_validation->set_rules(
-            'judul',
-            'Judul',
+            'headline',
+            'Headline',
             'required',
             [
                 'required' => '%s is Required!'
@@ -42,91 +44,49 @@ class Berita extends CI_Controller
         );
 
         // $this->form_validation->set_rules(
-        //     'genre',
-        //     'Genre',
+        //     'kategori',
+        //     'Kategori',
         //     'required',
         //     [
         //         'required' => '%s is required!',
         //     ]
         // );
         $this->form_validation->set_rules(
-            'tahun_rilis',
-            'Tahun Rilis',
+            'konten',
+            'Konten',
             'required',
             [
                 'required' => '%s is required!',
             ]
         );
-        $this->form_validation->set_rules(
-            'sutradara',
-            'Sutradara',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'rating',
-            'Rating',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'jenis',
-            'Jenis',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'based_on',
-            'Based On',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'sinopsis',
-            'Sinopsis',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
+
 
 
         if ($this->form_validation->run() == FALSE) {
-            $data['title'] = "Film Tambah";
+            $data['title'] = "Berita Tambah";
             $data['role'] = $this->Role_model->get_role();
-            $data['penerbit'] = $this->Penerbit_model->get_penerbit();
-            $data['pencetak'] = $this->Pencetak_model->get_pencetak();
             $data['kategori'] = $this->Kategori_model->get_kategori();
-            $data['join_buku'] = $this->Buku_model->join_buku_penerbit_pencetak();
             // $data['genre'] = GENRE_DATA;
-            // var_dump($data['genre']);
+            // var_dump($data['kategori']);
             // var_dump($data['genre']['genre'][0]);
             // die;
             $this->load->view('backend/layout/header', $data);
             $this->load->view('backend/layout/sidebar', $data);
             $this->load->view('backend/layout/navbar', $data);
-            $this->load->view('backend/content/film/tambah', $data);
+            $this->load->view('backend/content/berita/tambah', $data);
             $this->load->view('backend/layout/footer', $data);
         } else {
-            $this->Film_model->tambah();
+            $this->Berita_model->tambah();
             $this->session->set_flashdata('message', 'Data Berhasil ditambah');
-            redirect('film');
+            redirect('berita');
         }
     }
 
     public function ubah($id)
     {
         $this->form_validation->set_rules(
-            'judul',
-            'Judul',
+            'headline',
+            'Headline',
             'required',
             [
                 'required' => '%s is Required!'
@@ -134,56 +94,16 @@ class Berita extends CI_Controller
         );
 
         // $this->form_validation->set_rules(
-        //     'genre',
-        //     'Genre',
+        //     'kategori',
+        //     'Kategori',
         //     'required',
         //     [
         //         'required' => '%s is required!',
         //     ]
         // );
         $this->form_validation->set_rules(
-            'tahun_rilis',
-            'Tahun Rilis',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'sutradara',
-            'Sutradara',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'rating',
-            'Rating',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'jenis',
-            'Jenis',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'based_on',
-            'Based On',
-            'required',
-            [
-                'required' => '%s is required!',
-            ]
-        );
-        $this->form_validation->set_rules(
-            'sinopsis',
-            'Sinopsis',
+            'konten',
+            'Konten',
             'required',
             [
                 'required' => '%s is required!',
@@ -191,26 +111,39 @@ class Berita extends CI_Controller
         );
 
         if ($this->form_validation->run() == FALSE) {
-            $data['title'] = "Film Ubah";
+            $data['title'] = "Berita Ubah";
             $data['role'] = $this->Role_model->get_role();
-            $data['penerbit'] = $this->Penerbit_model->get_penerbit();
-            $data['pencetak'] = $this->Pencetak_model->get_pencetak();
             $data['kategori'] = $this->Kategori_model->get_kategori();
-            $data['buku_id'] = $this->Buku_model->get_buku_id($id);
-            $data['film_id'] = $this->Film_model->get_film_id($id);
+            $data['berita_id'] = $this->Berita_model->get_berita_id($id);
             // $data['genre'] = GENRE_DATA;
             // var_dump($data['buku_id']);
             // die;
             $this->load->view('backend/layout/header', $data);
             $this->load->view('backend/layout/sidebar', $data);
             $this->load->view('backend/layout/navbar', $data);
-            $this->load->view('backend/content/film/ubah', $data);
+            $this->load->view('backend/content/berita/ubah', $data);
             $this->load->view('backend/layout/footer', $data);
         } else {
-            $this->Film_model->ubah();
+            $this->Berita_model->ubah();
             $this->session->set_flashdata('message', 'Data Berhasil diubah');
-            redirect('film');
+            redirect('berita');
         }
+    }
+    public function detail($id)
+    {
+
+        $data['title'] = "Berita Ubah";
+        $data['role'] = $this->Role_model->get_role();
+        $data['kategori'] = $this->Kategori_model->get_kategori();
+        $data['berita_id'] = $this->Berita_model->get_berita_id($id);
+        // $data['genre'] = GENRE_DATA;
+        // var_dump($data['buku_id']);
+        // die;
+        $this->load->view('backend/layout/header', $data);
+        $this->load->view('backend/layout/sidebar', $data);
+        $this->load->view('backend/layout/navbar', $data);
+        $this->load->view('backend/content/berita/detail', $data);
+        $this->load->view('backend/layout/footer', $data);
     }
 
     public function hapus()

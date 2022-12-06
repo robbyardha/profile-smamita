@@ -69,7 +69,11 @@
 <!-- Main JS -->
 <script src="<?= base_url('assets/backend/') ?>js/main.js"></script>
 
-
+<!-- CKEDITOR -->
+<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script> -->
+<!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/decoupled-document/ckeditor.js"></script> -->
+<!-- <script src="<?= base_url('assets/backend/') ?>vendor/libs/ckeditor/ckeditor.js"></script> -->
 
 <!-- DATATABLES -->
 <script src="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/jquery-3.5.1.js"></script>
@@ -104,7 +108,25 @@
         });
     });
 </script> -->
-
+<!-- <script>
+    ClassicEditor
+        .create(document.querySelector('.ckeditor'))
+        .catch(error => {
+            console.error(error);
+        });
+    ClassicEditor.config.height = 500; // 500 pixels high.
+    ClassicEditor.config.height = '25em';
+</script> -->
+<!-- <script>
+    DecoupledEditor
+        .create(document.querySelector('#editor'))
+        .catch(error => {
+            console.error(error);
+        });
+</script> -->
+<script>
+    CKEDITOR.replace('.ckeditor');
+</script>
 <script>
     $(document).ready(function() {
         $('.datatables').DataTable();
