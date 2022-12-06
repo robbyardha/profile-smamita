@@ -27,8 +27,8 @@
                                     <a href="#">SIMANIS</a>
                                     <ul class="dropdown-menu clearfix">
                                         <li><a href="#">SIMANIS</a></li>
-                                        <li><a href="#">EXAM 10</a></li>
-                                        <li><a href="#">EXAM 11</a></li>
+                                        <li><a href="http://103.154.113.243:8250/exam10/">EXAM 10</a></li>
+                                        <li><a href="http://103.154.113.242:86/exam11/">EXAM 11</a></li>
                                         <li><a href="#">EXAM 12</a></li>
                                     </ul>
                                 </li>
@@ -42,6 +42,7 @@
                                         <li><a href="<?= base_url('home') ?>#visimisi">Visi Misi</a></li>
                                         <li><a href="<?= base_url('facilities') ?>">Facilities</a></li>
                                         <li><a href="<?= base_url('extracurricular') ?>">Extracurricular</a></li>
+                                        <li><a href="<?= base_url('prestasi') ?>">Prestasi</a></li>
                                     </ul>
                                 </li>
 
@@ -90,8 +91,8 @@
                                 <a href="#">SIMANIS</a>
                                 <ul class="dropdown-menu clearfix">
                                     <li><a href="#">SIMANIS</a></li>
-                                    <li><a href="#">EXAM 10</a></li>
-                                    <li><a href="#">EXAM 11</a></li>
+                                    <li><a href="http://103.154.113.243:8250/exam10/">EXAM 10</a></li>
+                                    <li><a href="http://103.154.113.242:86/exam11/">EXAM 11</a></li>
                                     <li><a href="#">EXAM 12</a></li>
                                 </ul>
                             </li>
@@ -105,6 +106,7 @@
                                     <li><a href="<?= base_url('home') ?>#visimisi">Visi Misi</a></li>
                                     <li><a href="<?= base_url('facilities') ?>">Facilities</a></li>
                                     <li><a href="<?= base_url('extracurricular') ?>">Extracurricular</a></li>
+                                    <li><a href="<?= base_url('prestasi') ?>">Prestasi</a></li>
                                 </ul>
                             </li>
                         </ul>

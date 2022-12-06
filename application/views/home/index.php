@@ -167,27 +167,14 @@
                     <p>Vision & Mission SMA Muhammadiyah 1 Taman</p>
                     <h2>Vision & Mission</h2>
                     <div id="accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h5 class="mb-0">
-                                    Vision
-                                </h5>
-                            </div>
 
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sholeh Dalam Perilaku,Unggul Dalam Mutu dan Berdaya Saing Global yang Kami Intepretasikan
-                                </div>
-                            </div>
-                        </div>
-                        <br>
                         <div class="card">
-                            <div class="card-header collapsed" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <div class="card-header collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <h5 class="mb-0 ">
                                     3 Pilar Utama
                                 </h5>
                             </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                                 <div class="card-body">
                                     <ul>
                                         <li>Excellent Islamic Culture</li>
@@ -201,6 +188,23 @@
                         <br>
 
                         <div class="card">
+                            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <h5 class="mb-0">
+                                    Vision
+                                </h5>
+                            </div>
+
+                            <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    Sholeh Dalam Perilaku,Unggul Dalam Mutu dan Berdaya Saing Global
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <br>
+
+                        <div class="card">
                             <div class="card-header collapsed" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                 <h5 class="mb-0">
                                     Mission
@@ -210,13 +214,16 @@
                                 <div class="card-body">
                                     <ol>
                                         <li>Menumbuhkan kesadaran seluruh warga sekolah untuk melaksanakan perintah Allah dan menjauhi larangan-Nya</li>
-                                        <li>Mewujudkan generasi islam yang Revolutioner</li>
+                                        <li>Mewujudkan generasi islam yang santun dalam berperilaku dan gemar beribadah</li>
                                         <li>Mengelolah dan mengembangkan pendidikan yang berakhalakul karimah</li>
-                                        <li>Mengembangkan potensi akademik dengan menyediakan fasilitas terbaik</li>
-                                        <li>Mengoptimalkan proses pembelajaran dan bimbingan intensif kepada peserta didik</li>
-                                        <li>Mengembangkan potensin non akademik dengan dengan memberikan fasilitas serta bimbingan dalam rangka pengembangan potensi</li>
+                                        <li>Mengembangkan potensi akademik dengan menyediakan fasilitas belajar mengajar dan teknologi informasi</li>
+                                        <li>Mengoptimalkan pelayanan akademik dan administratif</li>
+                                        <li>mengoptimalkan proses pembelajaran dan bimbingan intensif kepada putra didik</li>
                                         <li>Membina kemandirian dalam melaksanakan segala kegiatan</li>
-                                        <li>Mengikuti setiap Event dan kompetisi baik akademik maupun non akademik, baik dalam negeri maupun di luar negeri</li>
+                                        <li>Membangun kerjasama dengan lembaga luar negeri</li>
+                                        <li>Meningkatkan kemampuan bahasa asing</li>
+                                        <li>Meningkatkan kunjungan dan pertukaran siswa dan guru, dengan sekolahan luar negeri</li>
+
                                     </ol>
                                 </div>
                             </div>
