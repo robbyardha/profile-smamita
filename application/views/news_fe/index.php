@@ -51,15 +51,34 @@
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12">
                                         <div class="saasio-blog-text">
-                                            <h5><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h5>
+                                            <h5 style="text-align: justify ;"><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h5>
                                             <div class="saasio-post-meta">
                                                 <a href="#"><i class="fas fa-calendar-alt"></i> <?php $tanggal = $b['tanggal_publikasi'];
                                                                                                 $new_date = date('d F Y', strtotime($tanggal));
                                                                                                 echo ($new_date) ?></a>
                                                 <a href="#"><i class="fas fa-user"></i> <?= $b['penulis'] ?></a>
                                             </div>
-                                            <p>At vero eos et accusamus et iustoodio digni goikussimos ducimus qui blanp ditiis praesum voluum.</p>
-                                            <a class="blog-read-more" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
+                                            <?php
+                                            require_once("./vendor/html2text/html2text/src/Html2Text.php");
+                                            // $html = new \Html2Text\Html2Text('Hello, &quot;<b>world</b>&quot;');
+                                            $html = new \Html2Text\Html2Text($b['konten']);
+
+                                            //echo $html->getText();  // Hello, "WORLD"
+                                            ?>
+                                            <?php
+                                            // $word = strlen($html->getText() > 55);
+                                            //$new_word = mb_substr($html->getText(), 0, 100) . "....";
+                                            // var_dump($new_word);
+                                            // die;
+                                            // var_dump(strip_tags($html->getText()));
+                                            // substr($html->getText(), 0, 100)
+                                            // die;
+                                            $word = $html->getText();
+                                            ?>
+                                            <p style="text-align: justify ;">
+                                                <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+                                            </p>
+                                            <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
                                         </div>
                                     </div>
                                 </div>
