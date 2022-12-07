@@ -10,6 +10,8 @@
     <link rel="icon" href="<?= base_url() ?>assets/logo/barbar.png" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/plugin/owlcarousel/assets/owlcarousel.css">
+    <link rel="stylesheet" href="<?= base_url() ?>assets/plugin/owlcarousel/assets/owlthemedefault.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/owl.carousel.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/fontawesome-all.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/slick.css">

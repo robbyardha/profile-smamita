@@ -5,10 +5,14 @@ class News extends CI_Controller
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('Berita_model');
     }
     public function index()
     {
         $data['title'] = "News - SMAM1TA";
+        $data['berita'] = $this->Berita_model->get_berita();
+        // var_dump($data['berita']);
+        // die;
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);

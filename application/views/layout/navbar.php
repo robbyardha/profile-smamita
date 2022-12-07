@@ -31,7 +31,7 @@
                                     <li><a href="#">EXAM 12</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="<?= base_url('news') ?>">News</a></li>
                             <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li><a href="https://event.smam1ta.sch.id">Event</a></li>
                             <li class="dropdown">
@@ -127,7 +127,7 @@
                                     <li><a href="#">EXAM 12</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">News</a></li>
+                            <li><a href="<?= base_url('news') ?>">News</a></li>
                             <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li><a href="https://event.smam1ta.sch.id">Event</a></li>
                             <li class="dropdown">

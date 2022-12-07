@@ -16,6 +16,7 @@
 <script src="<?= base_url() ?>assets/js/slick.js"></script>
 <script src="<?= base_url() ?>assets/js/typer-new.js"></script>
 <script src="<?= base_url() ?>assets/js/side-demo.js"></script>
+<script src="<?= base_url() ?>assets/plugin/owlcarousel/owlcarousel.js"></script>
 <script src="<?= base_url() ?>assets/js/script.js"></script>
 
 
@@ -91,6 +92,23 @@
     document.getElementById('btn4').onclick = openPhotoSwipe;
     document.getElementById('btn5').onclick = openPhotoSwipe;
     document.getElementById('btn6').onclick = openPhotoSwipe;
+</script>
+<script>
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+            navigation: true, // Show next and prev buttons
+
+            slideSpeed: 300,
+            paginationSpeed: 400,
+
+            items: 1,
+            itemsDesktop: false,
+            itemsDesktopSmall: false,
+            itemsTablet: false,
+            itemsMobile: false
+        });
+
+    });
 </script>
 
 </body>
