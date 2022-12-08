@@ -69,6 +69,7 @@
 <!-- Main JS -->
 <script src="<?= base_url('assets/backend/') ?>js/main.js"></script>
 
+
 <!-- CKEDITOR -->
 <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
 <!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script> -->
@@ -81,6 +82,10 @@
 <script src="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/dataTables.bootstrap5.min.js"></script>
 <script src="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/dataTables.responsive.min.js"></script>
 <script src="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/responsive.bootstrap5.min.js"></script>
+
+
+<!-- SUMMERNOTE -->
+<script src="<?= base_url('assets/backend/') ?>vendor/libs/summernote/summernote.js"></script>
 
 <!-- SELECT2 -->
 <script src="<?= base_url('assets/backend/') ?>vendor/libs/select2/js/select2.full.min.js"></script>
@@ -124,15 +129,22 @@
             console.error(error);
         });
 </script> -->
+<!-- <script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+</script> -->
 <script>
-    CKEDITOR.replace('.ckeditor');
+    CKEDITOR.replace('.ckeditor', {
+        // extraPlugins: 'imageuploader'
+    });
 </script>
 <script>
     $(document).ready(function() {
         $('.datatables').DataTable();
         $('.select2').select2();
         $('.select2-multiple').select2();
-
+        $('#summernote').summernote();
         $(".flatpickr").flatpickr({
             dateFormat: "Y-m-d",
         });

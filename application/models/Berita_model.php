@@ -16,6 +16,11 @@ class Berita_model extends CI_Model
         }
     }
 
+    public function get_berita_slug($slug_berita)
+    {
+        return $this->db->get_where('berita', ['slug_berita' => $slug_berita, 'is_active' => 1])->row_array();
+    }
+
     public function count_berita_active()
     {
         return $this->db->get_where('berita', ['is_active' => 1])->num_rows();

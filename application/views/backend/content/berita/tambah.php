@@ -68,7 +68,7 @@
                     <div class="row g-2">
                         <div class="col mb-3">
                             <label for="desc" class="form-label">Konten</label>
-                            <textarea name="konten" id="konten" cols="80" rows="10" class="form-control ckeditor"><?= set_value('konten') ?></textarea>
+                            <textarea name="konten" id="summernote" cols="80" rows="10" class="form-control"><?= set_value('konten') ?></textarea>
                             <?= form_error('konten', '<small class="text-danger">', '</small>') ?>
                         </div>
                     </div>

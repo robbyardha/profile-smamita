@@ -120,7 +120,7 @@
 
                             //echo $html->getText();  // Hello, "WORLD"
                             ?>
-                            <textarea name="konten" id="konten" cols="80" rows="10" class="form-control ckeditor"><?= set_value('konten', $html->getText()) ?></textarea>
+                            <textarea name="konten" id="summernote" cols="80" rows="10" class="form-control "><?= set_value('konten', $html->getText()) ?></textarea>
                             <?= form_error('konten', '<small class="text-danger">', '</small>') ?>
                         </div>
                     </div>

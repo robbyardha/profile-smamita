@@ -20,13 +20,14 @@ class News extends CI_Controller
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
-    public function kesiswaan()
+    public function detail($slug_berita)
     {
-        $data['title'] = "Information - Kesiswaan";
+        $data['title'] = "Detail News - SMAM1TA";
+        $data['berita_slug'] = $this->Berita_model->get_berita_slug($slug_berita);
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
-        $this->load->view('information/teams', $data);
+        $this->load->view('news_fe/detail', $data);
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }

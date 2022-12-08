@@ -75,6 +75,9 @@
     <!-- FLATPICKR -->
     <link rel="stylesheet" href="<?= base_url('assets/backend/') ?>vendor/libs/flatpickr/flatpickr.min.css" />
 
+    <!-- SUMMERNOTE -->
+    <link rel="stylesheet" href="<?= base_url('assets/backend/') ?>vendor/libs/summernote/summernote.css" />
+
     <!-- DATATABLES -->
     <link rel="stylesheet" href="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="<?= base_url('assets/backend/') ?>vendor/libs/datatables/bs5/responsive.bootstrap5.min.css" />
