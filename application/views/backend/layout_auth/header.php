@@ -24,9 +24,9 @@
   <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta name="title" content="Glorindo Group">
-    <meta name="keywords" content="Spread your story like the stars in the sky.">
-    <meta name="description" content="Spread your story like the stars in the sky.">
+    <meta name="title" content="SMA Muhammadiyah 1 Taman">
+    <meta name="keywords" content="The Excellent School.">
+    <meta name="description" content="The Excellent School.">
 
     <title><?= $title ?></title>
 

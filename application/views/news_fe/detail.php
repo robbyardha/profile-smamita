@@ -52,7 +52,7 @@
                                 ?>
                                 <?= $word ?>
                             </article>
-                            <article>
+                            <!-- <article>
                                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum The man, who is in a stable condition in hospital, has "potentially life-changing injuries" after the overnight attack in Garvagh, County Lono donderry. He was shot in the arms and legs."What sort of men would think it is accepttable to sub ject a young girl to this level of brutality and violence?
                             </article>
                             <h3>Young girl to this level of brutality.</h3>
@@ -82,7 +82,7 @@
                             </article>
                             <article>
                                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum The man, who is in a stable condition in hospital.He was shot in the arms and legs."What sort of men would think it is accepttable to sub ject a young girl to this level of brutality and violence?
-                            </article>
+                            </article> -->
                         </div>
 
 
@@ -153,8 +153,8 @@
                         <div class="side-bar-widget">
                             <div class="search-widget dia-headline">
                                 <h3 class="widget-title-2">Search</h3>
-                                <form action="" class="relative-position">
-                                    <input type="text" name="search" placeholder="Search Here">
+                                <form action="<?= base_url('news') ?>/?keyword=" method="GET" class="relative-position">
+                                    <input type="text" id="keyword" name="keyword" placeholder="Search Here">
                                     <button type="submit"><i class="fas fa-search"></i></button>
                                 </form>
                             </div>
@@ -163,9 +163,9 @@
                             <div class="category-widget dia-headline ul-li-block">
                                 <h3 class="widget-title-2">Category</h3>
                                 <ul>
-                                    <li><a href="#">Application <span>(06)</span></a></li>
-                                    <li><a href="#">Software <span>(06)</span></a></li>
-                                    <li><a href="#">Landing Page <span>(06)</span></a></li>
+                                    <?php foreach ($kategori as $k) : ?>
+                                        <li><a href="news?kategori=<?= $k['kategori'] ?>"><?= $k['kategori'] ?></a></li>
+                                    <?php endforeach ?>
                                 </ul>
                             </div>
                         </div>
@@ -173,33 +173,19 @@
                             <div class="category-widget dia-headline ul-li-block">
                                 <h3 class="widget-title-2">Recent Post</h3>
                                 <div class="recent-post-area">
-                                    <div class="recent-post-img-text">
-                                        <div class="recent-post-img float-left">
-                                            <img src="assets/img/blog/rec1.jpg" alt="">
+                                    <?php foreach ($recent_news as $rn) : ?>
+                                        <div class="recent-post-img-text">
+                                            <div class="recent-post-img float-left">
+                                                <img src="<?= base_url('assets/backend/img/berita_images/') . $rn['image_berita'] ?>" alt="">
+                                            </div>
+                                            <div class="recent-post-text dia-headline">
+                                                <h5><a href="<?= base_url('news/detail/') . $rn['slug_berita'] ?>"><?= $rn['headline'] ?></a></h5>
+                                                <span class="rec-post-meta"><a href="#"><?php $tanggal = $rn['tanggal_publikasi'];
+                                                                                        $new_date = date('d F Y', strtotime($tanggal));
+                                                                                        echo ($new_date) ?></a></span>
+                                            </div>
                                         </div>
-                                        <div class="recent-post-text dia-headline">
-                                            <h3><a href="#">Engaging New Smart Approach.</a></h3>
-                                            <span class="rec-post-meta"><a href="#">December 12, 2021</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="recent-post-img-text">
-                                        <div class="recent-post-img float-left">
-                                            <img src="assets/img/blog/rec-2.jpg" alt="">
-                                        </div>
-                                        <div class="recent-post-text dia-headline">
-                                            <h3><a href="#">Engaging New Smart Approach.</a></h3>
-                                            <span class="rec-post-meta"><a href="#">December 12, 2021</a></span>
-                                        </div>
-                                    </div>
-                                    <div class="recent-post-img-text">
-                                        <div class="recent-post-img float-left">
-                                            <img src="assets/img/blog/rec-3.jpg" alt="">
-                                        </div>
-                                        <div class="recent-post-text dia-headline">
-                                            <h3><a href="#">Engaging New Smart Approach.</a></h3>
-                                            <span class="rec-post-meta"><a href="#">December 12, 2021</a></span>
-                                        </div>
-                                    </div>
+                                    <?php endforeach ?>
                                 </div>
                             </div>
                         </div>
@@ -207,11 +193,11 @@
                             <div class="popular-widget dia-headline ul-li">
                                 <h3 class="widget-title-2">Popular Tag</h3>
                                 <ul>
-                                    <li><a href="#">Application </a></li>
-                                    <li><a href="#">Software </a></li>
-                                    <li><a href="#">Landing </a></li>
-                                    <li><a href="#">App </a></li>
-                                    <li><a href="#">Design </a></li>
+                                    <li><a href="<?= base_url('news') ?>?kategori=Terbaru">Terbaru </a></li>
+                                    <li><a href="<?= base_url('news') ?>?kategori=Prestasi">Prestasi </a></li>
+                                    <li><a href="<?= base_url('news') ?>?kategori=Hiburan">Hiburan </a></li>
+                                    <li><a href="<?= base_url('news') ?>?kategori=Technology">Technology </a></li>
+                                    <li><a href="<?= base_url('news') ?>?kategori=Opini">Opini </a></li>
                                 </ul>
                             </div>
                         </div>

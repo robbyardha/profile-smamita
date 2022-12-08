@@ -6,12 +6,22 @@ class News extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Berita_model');
+        $this->load->model('Kategori_model');
     }
     public function index()
     {
         $data['title'] = "News - SMAM1TA";
         $data['berita'] = $this->Berita_model->get_berita();
-        // var_dump($data['berita']);
+        $keyword = $this->input->get('keyword');
+        $kategori_get = $this->input->get('kategori');
+        $data['search_berita'] = $this->Berita_model->search_berita($keyword);
+        $data['search_berita_by_kategori'] = $this->Berita_model->search_berita_by_kategori($kategori_get);
+        // var_dump($data['search_berita_by_kategori']);
+        // die;
+
+        $data['kategori'] = $this->Kategori_model->get_kategori();
+        $data['recent_news'] = $this->Berita_model->sort_berita_date();
+        // var_dump($data['recent_news']);
         // die;
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
@@ -24,6 +34,16 @@ class News extends CI_Controller
     {
         $data['title'] = "Detail News - SMAM1TA";
         $data['berita_slug'] = $this->Berita_model->get_berita_slug($slug_berita);
+        $data['berita'] = $this->Berita_model->get_berita();
+        $keyword = $this->input->get('keyword');
+        $kategori_get = $this->input->get('kategori');
+        $data['search_berita'] = $this->Berita_model->search_berita($keyword);
+        $data['search_berita_by_kategori'] = $this->Berita_model->search_berita_by_kategori($kategori_get);
+        // var_dump($data['search_berita_by_kategori']);
+        // die;
+
+        $data['kategori'] = $this->Kategori_model->get_kategori();
+        $data['recent_news'] = $this->Berita_model->sort_berita_date();
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);

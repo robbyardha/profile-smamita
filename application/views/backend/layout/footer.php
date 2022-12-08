@@ -71,7 +71,11 @@
 
 
 <!-- CKEDITOR -->
-<script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+<!-- <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script> -->
+<script src="<?= base_url('assets/backend/') ?>vendor/libs/ckeditor/ckeditor.js"></script>
+
+
+
 <!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/classic/ckeditor.js"></script> -->
 <!-- <script src="https://cdn.ckeditor.com/ckeditor5/35.3.2/decoupled-document/ckeditor.js"></script> -->
 <!-- <script src="<?= base_url('assets/backend/') ?>vendor/libs/ckeditor/ckeditor.js"></script> -->
@@ -135,8 +139,23 @@
     });
 </script> -->
 <script>
-    CKEDITOR.replace('.ckeditor', {
-        // extraPlugins: 'imageuploader'
+    CKEDITOR.replace('editor', {
+        height: 300,
+        // CKEDITOR.replace('.ckeditor', {
+        filebrowserUploadUrl: '<?= base_url('berita/ck_editor_uploadimg') ?>',
+        filebrowserUploadMethod: 'form'
+        // extraPlugins = 'imageuploader, uploadimage, filebrowser',
+        // extraPlugins: 'imageuploader',
+        // extraPlugins: 'uploadimage',
+        // extraPlugins: 'filebrowser',
+        // extraPlugins = 'filebrowser',
+        // uploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
+
+        // Configure your file manager integration. This example uses CKFinder 3 for PHP.
+        // filebrowserBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html',
+        // filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html?type=Images',
+        // filebrowserUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        // filebrowserImageUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Images',
     });
 </script>
 <script>

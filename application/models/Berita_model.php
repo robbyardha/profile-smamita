@@ -4,6 +4,7 @@ class Berita_model extends CI_Model
 {
     public function get_berita()
     {
+        $this->db->order_by('tanggal_publikasi', "DESC");
         return $this->db->get_where('berita', ['is_active' => 1])->result_array();
     }
 
@@ -21,30 +22,42 @@ class Berita_model extends CI_Model
         return $this->db->get_where('berita', ['slug_berita' => $slug_berita, 'is_active' => 1])->row_array();
     }
 
+    public function search_berita($keyword)
+    {
+        if (!$keyword) {
+            return $this->db->get_where('berita', ['is_active' => 1])->result_array();
+        }
+        $this->db->like('headline', $keyword);
+        $this->db->or_like('konten', $keyword);
+        $this->db->where('is_active', 1);
+        $query = $this->db->get('berita');
+        return $query->result_array();
+    }
+    public function search_berita_by_kategori($kategori)
+    {
+        if (!$kategori) {
+            return $this->db->get_where('berita', ['is_active' => 1])->result_array();
+        }
+        $this->db->like('kategori', $kategori);
+        $this->db->where('is_active', 1);
+        $query = $this->db->get('berita');
+        return $query->result_array();
+    }
+
+    public function sort_berita_date()
+    {
+        $this->db->order_by('tanggal_publikasi', "DESC");
+        $this->db->limit(5);
+        $this->db->where('is_active', 1);
+        $query = $this->db->get('berita');
+        return $query->result_array();
+    }
+
     public function count_berita_active()
     {
         return $this->db->get_where('berita', ['is_active' => 1])->num_rows();
     }
 
-    public function join_buku_penerbit_pencetak()
-    {
-        $this->db->select('*');
-        $this->db->from('buku');
-        $this->db->join('penerbit', 'penerbit.id = buku.penerbit_id');
-        $this->db->join('pencetak', 'pencetak.id = buku.pencetak_id');
-        $query = $this->db->get();
-        return $query->result_array();
-    }
-    public function join_buku_penerbit_pencetak_new()
-    {
-        $this->db->select('buku.id AS buku_id_asli, buku.judul, buku.penulis, buku.jumlah_halaman, buku.isbn, buku.edisi, buku.penerbit_id, buku.tanggal_terbit, buku.pencetak_id, buku.tanggal_cetak, buku.kategori, buku.sinopsis, buku.cover_illustrator_by, buku.cover_img, buku.is_active AS buku_active, buku.created_date, buku.update_date, penerbit.id as penerbit_id_asli, penerbit.nama_penerbit, penerbit.alamat_penerbit, penerbit.provinsi_penerbit, penerbit.kota_penerbit, penerbit.kode_pos_penerbit, penerbit.email_penerbit, penerbit.no_tlp_penerbit, penerbit.website_penerbit, penerbit.is_active AS penerbit_active, penerbit.created_date AS penerbit_created_dat, pencetak.id AS pencetak_id_asli, pencetak.nama_pencetak, pencetak.email_pencetak, pencetak.no_tlp_pencetak, pencetak.alamat_pencetak, pencetak.is_active AS pencetak_active, pencetak.created_date AS pencetak_created_date');
-        $this->db->from('buku');
-        $this->db->join('penerbit', 'penerbit.id = buku.penerbit_id');
-        $this->db->join('pencetak', 'pencetak.id = buku.pencetak_id');
-        $this->db->where('buku.is_active', 1);
-        $query = $this->db->get();
-        return $query->result_array();
-    }
 
     public function tambah()
     {
@@ -175,7 +188,6 @@ class Berita_model extends CI_Model
         $this->db->set('tanggal_publikasi', $tanggal_publikasi);
         $this->db->set('jam_publikasi', $jam_publikasi);
         $this->db->set('penulis', $penulis);
-        $this->db->set('image_berita', $image_berita_new);
         $this->db->set('slug_berita', $slug_headline_update);
 
         $this->db->set('updated_date', $updated_date);
