@@ -27,6 +27,7 @@
     <meta name="title" content="SMA Muhammadiyah 1 Taman">
     <meta name="keywords" content="The Excellent School.">
     <meta name="description" content="The Excellent School.">
+    <meta name="author" content="SMA Muhammadiyah 1 Taman">
 
     <!-- SHORTCUT TO USE EMOJI -->
     <!-- WINDOWS LOGO (at keyboard) + .   -->

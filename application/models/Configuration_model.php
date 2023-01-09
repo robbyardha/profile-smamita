@@ -30,7 +30,7 @@ class Configuration_model extends CI_Model
 
         if ($logo) {
             $config['allowed_types'] = 'jpeg|gif|jpg|png';
-            $config['max_size']  = 2048;
+            $config['max_size']  = 3500;
             $config['upload_path']  = './assets/backend/img/logo_company/';
             $config['file_name']  =  time() . "_logo_updated";
             $this->load->library('upload', $config);
@@ -85,7 +85,7 @@ class Configuration_model extends CI_Model
 
         if ($foto_direktur) {
             $config['allowed_types'] = 'jpeg|gif|jpg|png|JPG|JPEG|PNG';
-            $config['max_size']  = 2048;
+            $config['max_size']  = 8000;
             $config['upload_path']  = './assets/backend/img/foto_direktur/';
             $config['file_name']  =  time() . "_foto_updated";
             $this->load->library('upload', $config);

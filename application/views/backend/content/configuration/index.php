@@ -85,7 +85,7 @@
                                             <div class="row g-2">
                                                 <div class="col mb-0">
                                                     <label for="desc" class="form-label">Foto Direktur Baru</label>
-                                                    <input type="file" id="foto_direktur" name="foto_direktur" class="form-control" />
+                                                    <input type="file" id="foto_direktur" name="foto_direktur" accept="image/*" class="form-control" />
                                                     <input type="hidden" id="id" name="id" class="form-control" value="<?= $direktur['id'] ?>" />
 
                                                 </div>

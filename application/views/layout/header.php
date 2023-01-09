@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title><?= $title ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="SMA Muhammadiyah 1 Taman">
+    <meta name="keywords" content="SMAM1TA, smamita, SMA Muhammadiyah 1 Taman, The Excellent School">
+    <meta name="author" content="SMA Muhammadiyah 1 Taman">
     <meta name="description" content="SMA Muhammadiyah 1 Taman - Profile">
     <link rel="shortcut icon" href="<?= base_url() ?>assets/logo/barbar.png" type="image/x-icon">
     <link rel="icon" href="<?= base_url() ?>assets/logo/barbar.png" type="image/x-icon">
