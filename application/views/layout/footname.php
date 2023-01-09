@@ -33,6 +33,7 @@
                                 <li><a href="#">News</a></li>
                                 <li><a href="#">Contact</a></li>
                                 <li><a href="#">PPDB</a></li>
+                                <li><a href="<?= base_url('auth') ?>">Administrator</a></li>
                             </ul>
                         </div>
                     </div>

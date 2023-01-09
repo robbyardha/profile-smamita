@@ -83,15 +83,15 @@
              </li>
 
              <li class="menu-header small text-uppercase">
-                 <span class="menu-header-text">Documentation</span>
+                 <span class="menu-header-text">Profile</span>
              </li>
-             <li class="menu-item <?php if ($this->uri->segment(1) == "documentation" || $this->uri->segment(1) == "Documentation") {
+             <li class="menu-item <?php if ($this->uri->segment(1) == "profile" || $this->uri->segment(1) == "Profile") {
                                         echo "active";
                                     } ?>">
-                 <a href="<?= base_url('documentation') ?>" class="menu-link">
+                 <a href="<?= base_url('profile') ?>" class="menu-link">
                      <i class="menu-icon tf-icons bx bx-coffee"></i>
 
-                     <div data-i18n="Support">Documentation</div>
+                     <div data-i18n="Support">Profile</div>
                  </a>
              </li>
          </ul>
@@ -137,6 +137,19 @@
 
                      <i class="menu-icon tf-icons bx bx-spreadsheet"></i>
                      <div data-i18n="Basic">Banner Header</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Profile</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "profile" || $this->uri->segment(1) == "Profile") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('profile') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-coffee"></i>
+
+                     <div data-i18n="Support">Profile</div>
                  </a>
              </li>
 
