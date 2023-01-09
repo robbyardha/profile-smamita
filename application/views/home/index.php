@@ -76,14 +76,33 @@
     <div class="container">
         <div class="abou-area-content  position-relative">
             <div class="appseo-about-img  wow fadeFromLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
-                <img src="<?= base_url() ?>assets/img/seo/vector/abs.png" class="img-thumbnail" alt="">
+                <!-- <img src="<?= base_url() ?>assets/img/seo/vector/abs.png" class="img-thumbnail" alt=""> -->
+                <style>
+                    .img-direktur {
+                        height: 475px;
+                        width: 646px;
+                        border: 4px solid #FFFF;
+                        /* Gray border */
+                        border-radius: 4px;
+                        /* Rounded border */
+                    }
+
+                    .img-direktur:hover {
+                        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+                    }
+                </style>
+                <img src="<?= base_url('assets/backend/img/foto_direktur/') . $config_direktur['img_direktur'] ?>" class="img-direktur" alt="">
             </div>
             <div class="row">
                 <div class="col-lg-12">
                     <div class="appseo-about-content  wow fadeFromRight" data-wow-delay="600ms" data-wow-duration="1500ms">
                         <div class="appseo-section-title2 appseo-headline pera-content">
                             <p>President SMA Muhammadiyah 1 Taman</p>
-                            <h3><?= $kepsek ?></h3>
+                            <?php
+                            // var_dump($config_direktur['nama_direktur']);
+                            // die;
+                            ?>
+                            <h3><?= $config_direktur['nama_direktur'] ?></h3>
                         </div>
                         <!-- <div class="appseo-about-text">
                             Praesent sollicitudin felis a ornare volutpat. Nullam mal
@@ -114,10 +133,13 @@
                                     </g>
                                 </svg>
                             </div>
-                            <div class="quote-text-about text-justify">
+                            <!-- <div class="quote-text-about text-justify">
                                 “Assalammu'alaikum Wr.Wb
                                 Alhamdullilah, setelah perjalanan panjang yang begitu sulit. Kini SMA Muhammadiyah 1 Taman pelan tapi pasti dapat menyelesaikan misi dari visi yang telah dicanangkan. Berbagai pembenahan dan peningkatan kualitas pelayanan akademik maupun non akademik ditunjang dengan tenaga pendidik yang profesional, serta sarana dan prasarana telah dilakukan. Namun tidak hanya berhenti disitu, SMA Muhammadiyah 1 Taman akan meningkatkan berbagai program serta memfasilitasi siswa untuk terus berprestasi dan mengeksplorasi bakatnya. Semoga langkah ini menjadi gerbang dalam meraih kesuksesan bersama dimasa mendatang, aamiin insyaAllah
                                 Wassalammu'alaikum Wr.Wb”
+                            </div> -->
+                            <div class="quote-text-about text-justify">
+                                <?= $config_direktur['kata_pengantar'] ?>
                             </div>
                         </div>
                         <!-- <div class="appseo-about-btn text-center appseo-btn-hover text-uppercase">

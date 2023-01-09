@@ -59,6 +59,15 @@
                  <div data-i18n="Basic">Berita</div>
              </a>
          </li>
+         <li class="menu-item <?php if ($this->uri->segment(1) == "Banner_header" || $this->uri->segment(1) == "banner_header") {
+                                    echo "active";
+                                } ?>">
+             <a href="<?= base_url('banner_header') ?>" class="menu-link">
+
+                 <i class="menu-icon tf-icons bx bx-spreadsheet"></i>
+                 <div data-i18n="Basic">Banner Header</div>
+             </a>
+         </li>
 
 
          <li class="menu-header small text-uppercase">

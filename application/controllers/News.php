@@ -7,6 +7,7 @@ class News extends CI_Controller
         parent::__construct();
         $this->load->model('Berita_model');
         $this->load->model('Kategori_model');
+        $this->load->model('Banner_model');
     }
     public function index()
     {
@@ -21,6 +22,7 @@ class News extends CI_Controller
 
         $data['kategori'] = $this->Kategori_model->get_kategori();
         $data['recent_news'] = $this->Berita_model->sort_berita_date();
+        $data['banner_showlist'] = $this->Banner_model->get_banner_header();
         // var_dump($data['recent_news']);
         // die;
         $this->load->view('layout/header', $data);

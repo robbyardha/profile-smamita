@@ -63,6 +63,48 @@
 
                     </div>
                 </div>
+
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5>Foto Direktur</h5>
+                        <img class="img-fluid" src="<?= base_url('assets/backend/img/foto_direktur/') . $direktur['img_direktur'] ?>" alt="<?= $direktur['nama_direktur'] ?>" srcset="">
+
+                        <button class="btn btn-md btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#foto_direktur<?= $direktur['id'] ?>">Ubah Foto</button>
+
+                        <!-- Modal LOGO -->
+                        <div class="modal fade" id="foto_direktur<?= $direktur['id'] ?>" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <form action="<?= base_url('configuration/update_foto_direktur') ?>" method="post" enctype="multipart/form-data">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel1">Update Foto Direktur</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row g-2">
+                                                <div class="col mb-0">
+                                                    <label for="desc" class="form-label">Foto Direktur Baru</label>
+                                                    <input type="file" id="foto_direktur" name="foto_direktur" class="form-control" />
+                                                    <input type="hidden" id="id" name="id" class="form-control" value="<?= $direktur['id'] ?>" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="submit" class="btn btn-warning">Ubah Foto</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Modal LOGO -->
+                    </div>
+                </div>
+
             </div>
             <div class="col-xl-8">
                 <div class="card">
@@ -166,6 +208,73 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h5>Detail Direktur</h5>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Nama</label>
+                            <div class="col-sm-10">
+                                <strong><?= $direktur['nama_direktur'] ?></strong>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Kata Pengantar</label>
+                            <div class="col-sm-10">
+                                <p style="text-align:justify ;"><?= $direktur['kata_pengantar'] ?></p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-md btn-primary" data-bs-toggle="modal" data-bs-target="#modal_direktur<?= $direktur['id'] ?>">Ubah Data</button>
+                    </div>
+
+                    <!-- MODAL UPDATE DATA DIREKTUR -->
+                    <div class="modal fade" id="modal_direktur<?= $direktur['id'] ?>" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <form action="<?= base_url('configuration/update_data_direktur') ?>" method="post">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel1">Update Data Direktur</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="hidden" id="id" name="id" class="form-control" value="<?= $direktur['id'] ?>" />
+                                        <div class="row g-2">
+                                            <div class="col mb-2">
+                                                <label for="nama_direktur" class="form-label">Nama Direktur</label>
+                                                <input type="text" id="nama_direktur" name="nama_direktur" value="<?= $direktur['nama_direktur'] ?>" class="form-control" />
+                                            </div>
+                                        </div>
+                                        <div class="row g-2">
+                                            <div class="col mb-2">
+                                                <label for="name" class="form-label">Kata Pengatar</label>
+                                                <textarea name="kata_pengantar" id="kata_pengantar" cols="30" rows="10" class="form-control"><?= $direktur['kata_pengantar'] ?></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                            Close
+                                        </button>
+                                        <button type="submit" class="btn btn-warning">Ubah </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END MODAL UPDATE DATA DIREKTUR -->
+
+
+
+                </div>
+
+
+
             </div>
         </div>
 

@@ -20,6 +20,7 @@ class Configuration extends CI_Controller
         // die;
         $data['title'] = "Configuration Apps";
         $data['config_app'] = $this->Configuration_model->get_config();
+        $data['direktur'] = $this->Configuration_model->get_direktur();
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);
@@ -185,6 +186,47 @@ class Configuration extends CI_Controller
             $this->Role_model->hapus();
             $this->session->set_flashdata('message', 'Data Berhasil dihapus');
             redirect('role');
+        }
+    }
+
+    public function update_data_direktur()
+    {
+        $this->form_validation->set_rules(
+            'id',
+            'ID',
+            'required',
+            [
+                'required' => '%s is required!',
+            ]
+        );
+
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('message_error', 'Terdapat data yang kosong. Silahkan lengkapi data');
+            redirect('configuration');
+        } else {
+            $this->Configuration_model->update_data_direktur();
+            $this->session->set_flashdata('message', 'Data Berhasil diupdate');
+            redirect('configuration');
+        }
+    }
+
+    public function update_foto_direktur()
+    {
+        $this->form_validation->set_rules(
+            'id',
+            'ID',
+            'required',
+            [
+                'required' => '%s harus diisi'
+            ]
+        );
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('message_error', 'Terdapat data yang kosong. Lengkapi data untuk merubah');
+            redirect('configuration');
+        } else {
+            $this->Configuration_model->update_foto_direktur();
+            $this->session->set_flashdata('message', 'Foto Direktur Berhasil Diubah');
+            redirect('configuration');
         }
     }
 }

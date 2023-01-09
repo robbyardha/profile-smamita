@@ -61,4 +61,48 @@ class Configuration_model extends CI_Model
     // }
 
 
+    public function get_direktur()
+    {
+        return $this->db->get('konfigurasi_direktur')->row_array();
+    }
+
+    public function update_data_direktur()
+    {
+        $id = htmlspecialchars($this->input->post('id'));
+        $nama_direktur = htmlspecialchars($this->input->post('nama_direktur'));
+        $kata_pengantar = htmlspecialchars($this->input->post('kata_pengantar'));
+
+        $this->db->set('nama_direktur', $nama_direktur);
+        $this->db->set('kata_pengantar', $kata_pengantar);
+        $this->db->where('id', $id);
+        $this->db->update('konfigurasi_direktur');
+    }
+
+    public function update_foto_direktur()
+    {
+        $id = htmlspecialchars($this->input->post('id'));
+        $foto_direktur = $_FILES['foto_direktur']['name'];
+
+        if ($foto_direktur) {
+            $config['allowed_types'] = 'jpeg|gif|jpg|png|JPG|JPEG|PNG';
+            $config['max_size']  = 2048;
+            $config['upload_path']  = './assets/backend/img/foto_direktur/';
+            $config['file_name']  =  time() . "_foto_updated";
+            $this->load->library('upload', $config);
+
+            if ($this->upload->do_upload('foto_direktur')) {
+                // $data = $this->upload->data();
+                // $image = $data['file_name'];
+                $foto_direktur_new = $this->upload->data('file_name');
+                $this->db->set('img_direktur', $foto_direktur_new);
+            } else {
+                echo $this->upload->display_errors();
+                $this->session->set_flashdata('message_error', 'Can`t Uploaded Because You not selected Image Foto Direktur');
+                redirect('configuration');
+            }
+        }
+
+        $this->db->where('id', $id);
+        $this->db->update('konfigurasi_direktur');
+    }
 }
