@@ -38,6 +38,15 @@
                  </a>
              </li>
 
+             <li class="menu-item <?php if ($this->uri->segment(1) == "account" || $this->uri->segment(1) == "Account") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('account') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                     <div data-i18n="Basic">Account</div>
+                 </a>
+             </li>
+
              <li class="menu-header small text-uppercase">
                  <span class="menu-header-text">Published News</span>
              </li>
