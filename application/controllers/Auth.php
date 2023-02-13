@@ -110,8 +110,8 @@ class Auth extends CI_Controller
 
     public function register()
     {
-        // $this->session->set_flashdata('akun_error', 'Maaf Fitur ini dinonaktifkan administrator');
-        // redirect('auth/index');
+        $this->session->set_flashdata('akun_error', 'Maaf Fitur ini dinonaktifkan administrator');
+        redirect('auth/index');
         $this->form_validation->set_rules(
             'nama',
             'Nama',
