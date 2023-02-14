@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2023 at 04:26 AM
+-- Generation Time: Feb 14, 2023 at 08:22 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.9
 
@@ -128,6 +128,20 @@ CREATE TABLE `configuration` (
 
 INSERT INTO `configuration` (`id`, `name`, `logo`, `company`, `about`, `phone_number`, `email`, `tagline`, `last_update`) VALUES
 (1, 'SMA Muhammadiyah 1 Taman', '1670339301_logo_updated.png', 'SMA Muhammadiyah 1 Taman', 'SMAMITA Sidoarjo telah mengalami perjalanan panjang, berdiri pada tahun 1984, SMAMITA telah melalui berbagai rintangan baik yang sifatnya mikro maupun makro. Dengan berbekal disiplin serta pengembangan dan peningkatan mutu pendidikan, menjadikan masuyarakat Sidoarjo semakin percaya kepada SMAMITA..kepercayaan ini berkembang terus sehingga SMAMITA mulai mendapatkan peserta didik melebihi pagu (kuota) yang disiapkan. Pada usianya yang sudah cukup dewasa ini SMAMITA terus melakukan pembenahan dan pengembangan serta pembaharuan (developmend reform) di berbagai bidang, baik sarana prasarana, kurikulum pendidikan dan pembelajaran, sember daya pelaksana maupun kultur yang dikembangkan sekolah. Berbagai langkah riil yang dilakukan dmaksudkan untuk menjadikan SMAMITA sekolah yang bonafit (the excellent school) yang membangun tradisi keilmuan dan spiritualitas keislaman sehingga dapat mengantarkan civitas sekolah menjadi manusia yang sholeh dalam prilaku dan unggul dalam mutu dengan keimanan dan ketaqwaan yang kokoh, wawasan keilmuan yang modern serta kecakapan hidup (life skill) dan akhlaqul karimah yang menghiasi prilaku kesehariannya. Upaya pengembangan dan pembaharuan (development and reform) yang dilakukan SMAMITA tidak hanya berdampak pada semakin meningkatnya kepercayaan masyarakat untuk menyekolahkan putra – putrinya di SMAMITA tapi juga berimbas pada terangkatnya status akreditasi sekolah secara kelembagaan dengan “Akreditasi A”. Dengan status akreditsi A itu semakin memposisikan SMAMITA pada jajaran sekolah – sekolah modern di lingkungankabupaten Sidoarjo. Pada tahun pelajaran 2017 / 2018 ini menerapkan kurikulum 2013 dengan menawarkan 2 (dua) program peminatan yang bersifat intrakurikuler yaitu (1) peminatan Matematika dan Ilmu Alam (MIPA (2) peminatan ilmu sosial (IPS). Selain itu juga tersedia puluhan program peminatan yang bersifat ekstrakurikuler yang diklasifikasikan dalam kelompok KeIslaman, kesenian, keolahragaan, ilm pengetahuan dan tehnologi, kepanduan dan sosial.', '031-7881550', 'sma.muhammadiyah1taman@gmail.com', 'The Excellent School', '2022-11-20 06:11:28');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ekstrakurikuler`
+--
+
+CREATE TABLE `ekstrakurikuler` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(155) NOT NULL,
+  `foto` varchar(200) NOT NULL,
+  `is_active` int(11) NOT NULL DEFAULT 1,
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -359,7 +373,32 @@ INSERT INTO `kurikulum_struktur` (`id`, `nama`, `divisi`, `foto`, `is_active`, `
 (5, 'tes diubah ygy ', 'hehehe', 'tes_diubah_ygy__STRUKTUR_UPDATED.JPG', 1, '2023-02-13 05:15:55'),
 (6, 'ywoww', 'cxz', 'ywoww_struktur_kurikulum.JPG', 1, '2023-02-13 05:21:10'),
 (7, 'hehe not bad', 'not bad', 'hehe_not_bad_struktur_kurikulum.JPG', 1, '2023-02-13 05:23:23'),
-(8, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07');
+(8, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(9, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(10, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(11, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(12, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(13, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(14, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07'),
+(15, 'quieoe oe', 'sl;skd sodmlasd', 'quieoe_oe_struktur_kurikulum.JPG', 1, '2023-02-13 05:30:07');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prestasi`
+--
+
+CREATE TABLE `prestasi` (
+  `id` int(11) NOT NULL,
+  `nama_siswa` varchar(155) NOT NULL,
+  `kelas` varchar(155) NOT NULL,
+  `nama_prestasi` varchar(100) NOT NULL,
+  `tingkat_prestasi` varchar(100) NOT NULL,
+  `tahun_prestasi` varchar(10) NOT NULL,
+  `foto` varchar(200) NOT NULL,
+  `is_active` int(11) NOT NULL DEFAULT 1,
+  `created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -421,7 +460,7 @@ CREATE TABLE `sarpras_fasilitas` (
 --
 
 INSERT INTO `sarpras_fasilitas` (`id`, `nama`, `foto`, `is_active`, `created_date`) VALUES
-(1, 'ganti fasilitias', 'ganti_fasilitias_FASILITAS_UPDATED.png', 0, '2023-02-14 01:12:46'),
+(1, 'ganti fasilitias', 'ganti_fasilitias_FASILITAS_UPDATED.png', 1, '2023-02-14 01:12:46'),
 (2, 'ruang uks', 'ruang_uks_FASILITAS.jpeg', 1, '2023-02-14 02:25:20');
 
 -- --------------------------------------------------------
@@ -467,7 +506,7 @@ CREATE TABLE `teams` (
 
 INSERT INTO `teams` (`id`, `nama`, `bagian`, `foto`, `is_active`, `created_date`) VALUES
 (1, 'ROBBY FIRMANSYAH ARDHA', 'Kepala IT', 'ROBBY_FIRMANSYAH_ARDHA_TEAMS.jpg', 1, '2023-02-14 03:23:20'),
-(2, 'sugondo', 'yadks', 'sugondo_TEAMS_UPDATED.png', 0, '2023-02-14 03:23:53');
+(2, 'sugondo', 'yadks', 'sugondo_TEAMS_UPDATED.png', 1, '2023-02-14 03:23:53');
 
 --
 -- Indexes for dumped tables
@@ -495,6 +534,12 @@ ALTER TABLE `berita`
 -- Indexes for table `configuration`
 --
 ALTER TABLE `configuration`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ekstrakurikuler`
+--
+ALTER TABLE `ekstrakurikuler`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -558,6 +603,12 @@ ALTER TABLE `kurikulum_struktur`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `role`
 --
 ALTER TABLE `role`
@@ -614,6 +665,12 @@ ALTER TABLE `berita`
 --
 ALTER TABLE `configuration`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ekstrakurikuler`
+--
+ALTER TABLE `ekstrakurikuler`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `humas`
@@ -673,7 +730,13 @@ ALTER TABLE `kurikulum`
 -- AUTO_INCREMENT for table `kurikulum_struktur`
 --
 ALTER TABLE `kurikulum_struktur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `prestasi`
+--
+ALTER TABLE `prestasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `role`

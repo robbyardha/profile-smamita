@@ -59,6 +59,32 @@
              </li>
 
 
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Ekstrakurikuler</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "ekstrakurikuler_be" || $this->uri->segment(1) == "Ekstrakurikuler_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('ekstrakurikuler_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Ekstrakurikuler</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Prestasi</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "prestasi_be" || $this->uri->segment(1) == "Prestasi_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('prestasi_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Prestasi</div>
+                 </a>
+             </li>
+
+
+
 
              <!-- KURIKULUM -->
              <li class="menu-header small text-uppercase">

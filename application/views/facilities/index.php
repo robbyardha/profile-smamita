@@ -58,7 +58,7 @@
         font-style: normal;
         font-weight: 400;
         letter-spacing: 0;
-        padding: 1rem;
+        /* padding: 1rem; */
     }
 
     .main {
