@@ -38,6 +38,7 @@
                  </a>
              </li>
 
+
              <li class="menu-item <?php if ($this->uri->segment(1) == "account" || $this->uri->segment(1) == "Account") {
                                         echo "active";
                                     } ?>">
@@ -46,6 +47,18 @@
                      <div data-i18n="Basic">Account</div>
                  </a>
              </li>
+
+
+             <li class="menu-item <?php if ($this->uri->segment(1) == "teams_be" || $this->uri->segment(1) == "Teams_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('teams_be') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+                     <div data-i18n="Basic">Teams</div>
+                 </a>
+             </li>
+
+
 
              <!-- KURIKULUM -->
              <li class="menu-header small text-uppercase">
