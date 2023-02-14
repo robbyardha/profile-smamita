@@ -15,9 +15,27 @@
         <div class="sa-team-=inner-contenb">
             <div class="row">
                 <div class="col text-center">
-                    <div class="alert alert-success" role="alert">
-                        Coming Soon
-                    </div>
+                    <table class="table table-primary">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Bagian</th>
+                                <th>Foto</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($get_team_all as $gtall) : ?>
+                                <tr>
+                                    <td><?= $gtall['nama'] ?></td>
+                                    <td><?= $gtall['bagian'] ?></td>
+                                    <td>
+                                        <img height="150" width="150" src="<?= base_url('assets/file_upload/teams/') . $gtall['foto'] ?>" alt="" srcset="">
+                                    </td>
+                                </tr>
+                            <?php endforeach ?>
+                        </tbody>
+                    </table>
+
                 </div>
                 <!-- 
                 <div class="col-lg-3 col-md-6">

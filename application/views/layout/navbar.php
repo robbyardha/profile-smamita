@@ -15,14 +15,17 @@
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="<?= base_url('information/kesiswaan') ?>">Kesiswaan</a></li>
-                                    <li><a href="<?= base_url('information/kurikulum') ?>">Kurikulum</a></li>
-                                    <li><a href="<?= base_url('information/gallery') ?>">Gallery</a></li>
                                     <li><a href="<?= base_url('information/teams') ?>">Team</a></li>
+                                    <li><a href="<?= base_url('information/kurikulum') ?>">Kurikulum</a></li>
+                                    <li><a href="<?= base_url('information/kesiswaan') ?>">Kesiswaan</a></li>
+                                    <li><a href="<?= base_url('information/sarpras') ?>">Sarpras</a></li>
+                                    <li><a href="<?= base_url('information/humas') ?>">Humas</a></li>
+                                    <li><a href="<?= base_url('information/ismuba') ?>">Ismuba</a></li>
+                                    <li><a href="<?= base_url('information/gallery') ?>">Gallery</a></li>
                                     <li><a href="<?= base_url('information/announcement') ?>">Announcement</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <!-- <li class="dropdown">
                                 <a href="#">SIMANIS</a>
                                 <ul class="dropdown-menu clearfix">
                                     <li><a href="#">SIMANIS</a></li>
@@ -30,7 +33,7 @@
                                     <li><a href="http://103.154.113.242:86/exam11/">EXAM 11</a></li>
                                     <li><a href="#">EXAM 12</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="<?= base_url('news') ?>">News</a></li>
                             <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li><a href="https://event.smam1ta.sch.id">Event</a></li>
@@ -110,15 +113,18 @@
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">
-                                    <li><a href="<?= base_url('information/kesiswaan') ?>">Kesiswaan</a></li>
-                                    <li><a href="<?= base_url('information/kurikulum') ?>">Kurikulum</a></li>
-                                    <li><a href="<?= base_url('information/gallery') ?>">Gallery</a></li>
                                     <li><a href="<?= base_url('information/teams') ?>">Team</a></li>
+                                    <li><a href="<?= base_url('information/kurikulum') ?>">Kurikulum</a></li>
+                                    <li><a href="<?= base_url('information/kesiswaan') ?>">Kesiswaan</a></li>
+                                    <li><a href="<?= base_url('information/sarpras') ?>">Sarpras</a></li>
+                                    <li><a href="<?= base_url('information/humas') ?>">Humas</a></li>
+                                    <li><a href="<?= base_url('information/ismuba') ?>">Ismuba</a></li>
+                                    <li><a href="<?= base_url('information/gallery') ?>">Gallery</a></li>
                                     <li><a href="<?= base_url('information/announcement') ?>">Announcement</a></li>
 
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <!-- <li class="dropdown">
                                 <a href="#">SIMANIS</a>
                                 <ul class="dropdown-menu clearfix">
                                     <li><a href="#">SIMANIS</a></li>
@@ -126,7 +132,7 @@
                                     <li><a href="http://103.154.113.242:86/exam11/">EXAM 11</a></li>
                                     <li><a href="#">EXAM 12</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                             <li><a href="<?= base_url('news') ?>">News</a></li>
                             <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li><a href="https://event.smam1ta.sch.id">Event</a></li>

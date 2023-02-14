@@ -80,8 +80,8 @@
                                         <img src="<?= base_url('assets/backend/') ?>img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
                                     </div>
                                 </div>
-                                <span class="fw-semibold d-block mb-1">Book</span>
-                                <h3 class="card-title mb-2"><?= 11 ?></h3>
+                                <span class="fw-semibold d-block mb-1">Teams</span>
+                                <h3 class="card-title mb-2"><?= $team_count ?></h3>
                             </div>
                         </div>
                     </div>
@@ -102,8 +102,8 @@
                                         </div>
                                     </div> -->
                                 </div>
-                                <span>Penerbit</span>
-                                <h3 class="card-title text-nowrap mb-2"><?= 11 ?></h3>
+                                <span>Berita</span>
+                                <h3 class="card-title text-nowrap mb-2"><?= $berita_count ?></h3>
 
                             </div>
                         </div>
@@ -131,8 +131,8 @@
                                         </div>
                                     </div> -->
                                 </div>
-                                <span class="d-block mb-1">Pencetak</span>
-                                <h3 class="card-title text-nowrap mb-2"><?= 22 ?></h3>
+                                <span class="d-block mb-1">Kategori Berita</span>
+                                <h3 class="card-title text-nowrap mb-2"><?= $kategori_count ?></h3>
 
                             </div>
                         </div>
