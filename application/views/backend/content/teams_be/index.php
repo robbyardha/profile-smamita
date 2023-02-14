@@ -73,8 +73,7 @@
                                                 <div class="row">
                                                     <div class="col mb-3">
                                                         <label for="type" class="form-label">Nama</label>
-                                                        <input type="text" id="nama" name="nama" class="form-control" value="<?= $krstr['nama'] ?>" placeholder="Enter nama" />
-
+                                                        <p><?= $krstr['nama'] ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row g-2">

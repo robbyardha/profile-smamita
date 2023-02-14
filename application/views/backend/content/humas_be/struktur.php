@@ -73,15 +73,14 @@
                                                 <div class="row">
                                                     <div class="col mb-3">
                                                         <label for="type" class="form-label">Nama</label>
-                                                        <input type="text" id="nama" name="nama" class="form-control" value="<?= $krstr['nama'] ?>" placeholder="Enter nama" />
+                                                        <p><?= $krstr['nama'] ?></p>
 
                                                     </div>
                                                 </div>
                                                 <div class="row g-2">
                                                     <div class="col mb-0">
                                                         <label for="divisi" class="form-label">Divisi / Jabatan</label>
-                                                        <input type="text" id="divisi" name="divisi" class="form-control" value="<?= $krstr['divisi'] ?>" placeholder="Enter Deskripsi" />
-
+                                                        <p><?= $krstr['divisi'] ?></p>
                                                     </div>
                                                 </div>
                                                 <div class="row g-2">
