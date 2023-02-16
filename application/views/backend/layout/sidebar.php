@@ -25,6 +25,8 @@
              </li>
 
 
+
+
              <li class="menu-header small text-uppercase">
                  <span class="menu-header-text">Master</span>
              </li>
@@ -82,8 +84,6 @@
                      <div data-i18n="Support">Prestasi</div>
                  </a>
              </li>
-
-
 
 
              <!-- KURIKULUM -->
@@ -233,8 +233,25 @@
                      <div data-i18n="Support">Profile</div>
                  </a>
              </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Analitik</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "analitik" || $this->uri->segment(1) == "Analitik") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('analitik') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-coffee"></i>
+
+                     <div data-i18n="Support">Analitik</div>
+                 </a>
+             </li>
          </ul>
 
+
+
+
+         <!-- HUMAS ACCESS-->
      <?php elseif ($this->session->userdata('role_id') == 2) : ?>
          <ul class="menu-inner py-1">
              <!-- Dashboard -->
@@ -279,6 +296,24 @@
                  </a>
              </li>
 
+
+             <!-- HUMAS -->
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Humas</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "humas_be" || $this->uri->segment(1) == "Humas_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('humas_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Humas Profile</div>
+                 </a>
+                 <a href="<?= base_url('humas_be/struktur') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Humas Struktur</div>
+                 </a>
+             </li>
+
              <li class="menu-header small text-uppercase">
                  <span class="menu-header-text">Profile</span>
              </li>
@@ -291,10 +326,223 @@
                      <div data-i18n="Support">Profile</div>
                  </a>
              </li>
-
-
-
          </ul>
+
+
+         <!-- KURIKULUM ACCESS-->
+     <?php elseif ($this->session->userdata('role_id') == 3) : ?>
+
+         <ul class="menu-inner py-1">
+             <!-- Dashboard -->
+             <li class="menu-item <?php if ($this->uri->segment(1) == "dashboard" || $this->uri->segment(1) == "Dashboard") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('dashboard') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                     <div data-i18n="Analytics">Dashboard</div>
+                 </a>
+             </li>
+
+             <!-- KURIKULUM -->
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Kurikulum</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "kurikulum_be" || $this->uri->segment(1) == "Kurikulum_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('kurikulum_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Kurikulum Profile</div>
+                 </a>
+                 <a href="<?= base_url('kurikulum_be/struktur') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Kurikulum Struktur</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Profile</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "profile" || $this->uri->segment(1) == "Profile") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('profile') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-coffee"></i>
+
+                     <div data-i18n="Support">Profile</div>
+                 </a>
+             </li>
+         </ul>
+
+         <!-- Kesiswaan ACCESS-->
+     <?php elseif ($this->session->userdata('role_id') == 4) : ?>
+
+         <ul class="menu-inner py-1">
+             <!-- Dashboard -->
+             <li class="menu-item <?php if ($this->uri->segment(1) == "dashboard" || $this->uri->segment(1) == "Dashboard") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('dashboard') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                     <div data-i18n="Analytics">Dashboard</div>
+                 </a>
+             </li>
+
+             <!-- KESISWAAN -->
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Kesiswaan</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "kesiswaan_be" || $this->uri->segment(1) == "Kesiswaan_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('kesiswaan_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Kesiswaan Profile</div>
+                 </a>
+                 <a href="<?= base_url('kesiswaan_be/struktur') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Kesiswaan Struktur</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Ekstrakurikuler</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "ekstrakurikuler_be" || $this->uri->segment(1) == "Ekstrakurikuler_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('ekstrakurikuler_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Ekstrakurikuler</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Prestasi</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "prestasi_be" || $this->uri->segment(1) == "Prestasi_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('prestasi_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Prestasi</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Profile</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "profile" || $this->uri->segment(1) == "Profile") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('profile') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-coffee"></i>
+
+                     <div data-i18n="Support">Profile</div>
+                 </a>
+             </li>
+         </ul>
+
+
+
+         <!-- SARPRAS ACCESS -->
+     <?php elseif ($this->session->userdata('role_id') == 5) : ?>
+
+         <ul class="menu-inner py-1">
+             <!-- Dashboard -->
+             <li class="menu-item <?php if ($this->uri->segment(1) == "dashboard" || $this->uri->segment(1) == "Dashboard") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('dashboard') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                     <div data-i18n="Analytics">Dashboard</div>
+                 </a>
+             </li>
+
+             <!-- SARPRAS -->
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Sarpras</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "sarpras_be" || $this->uri->segment(1) == "Sarpras_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('sarpras_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Sarpras Profile</div>
+                 </a>
+                 <a href="<?= base_url('sarpras_be/struktur') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Sarpras Struktur</div>
+                 </a>
+                 <a href="<?= base_url('sarpras_be/fasilitas') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Sarpras Fasilitas</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Profile</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "profile" || $this->uri->segment(1) == "Profile") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('profile') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-coffee"></i>
+
+                     <div data-i18n="Support">Profile</div>
+                 </a>
+             </li>
+         </ul>
+
+
+         <!-- ISMUBA ACCESS -->
+     <?php elseif ($this->session->userdata('role_id') == 6) : ?>
+
+         <ul class="menu-inner py-1">
+             <!-- Dashboard -->
+             <li class="menu-item <?php if ($this->uri->segment(1) == "dashboard" || $this->uri->segment(1) == "Dashboard") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('dashboard') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                     <div data-i18n="Analytics">Dashboard</div>
+                 </a>
+             </li>
+
+             <!-- ISMUBA -->
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Ismuba</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "ismuba_be" || $this->uri->segment(1) == "Ismuba_be") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('ismuba_be/index') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Ismuba Profile</div>
+                 </a>
+                 <a href="<?= base_url('ismuba_be/struktur') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Ismuba Struktur</div>
+                 </a>
+             </li>
+
+             <li class="menu-header small text-uppercase">
+                 <span class="menu-header-text">Profile</span>
+             </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "profile" || $this->uri->segment(1) == "Profile") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('profile') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-coffee"></i>
+
+                     <div data-i18n="Support">Profile</div>
+                 </a>
+             </li>
+         </ul>
+
+
+
+
      <?php endif ?>
 
  </aside>
