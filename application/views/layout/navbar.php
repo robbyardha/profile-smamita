@@ -11,7 +11,7 @@
                     <nav class="appseo-main-navigation clearfix ul-li">
                         <ul>
                             <!-- <li class="side-demo position-relative"><a href="#!">Demos</a> <span>New</span></li> -->
-                            <li><a href="#home">Home</a></li>
+                            <li><a href="<?= base_url('home') ?>">Home</a></li>
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">
@@ -109,7 +109,7 @@
                     </div>
                     <nav class="appseo-mobile-main-navigation  clearfix ul-li">
                         <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="<?= base_url('home') ?>">Home</a></li>
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">

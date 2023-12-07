@@ -16297,6 +16297,8 @@ div#preloader {
 }
 
 .blog-details-img {
+	max-width: 100%;
+	height: auto;
 	margin-bottom: 40px;
 }
 

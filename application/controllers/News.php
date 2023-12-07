@@ -17,14 +17,10 @@ class News extends CI_Controller
         $kategori_get = $this->input->get('kategori');
         $data['search_berita'] = $this->Berita_model->search_berita($keyword);
         $data['search_berita_by_kategori'] = $this->Berita_model->search_berita_by_kategori($kategori_get);
-        // var_dump($data['search_berita_by_kategori']);
-        // die;
-
         $data['kategori'] = $this->Kategori_model->get_kategori();
         $data['recent_news'] = $this->Berita_model->sort_berita_date();
         $data['banner_showlist'] = $this->Banner_model->get_banner_header();
-        // var_dump($data['recent_news']);
-        // die;
+
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
@@ -34,18 +30,20 @@ class News extends CI_Controller
     }
     public function detail($slug_berita)
     {
+
         $data['title'] = "Detail News - SMAM1TA";
         $data['berita_slug'] = $this->Berita_model->get_berita_slug($slug_berita);
+        $data['slug'] = $slug_berita;
+        // var_dump($data['berita_slug']);
+        // die();
         $data['berita'] = $this->Berita_model->get_berita();
         $keyword = $this->input->get('keyword');
         $kategori_get = $this->input->get('kategori');
         $data['search_berita'] = $this->Berita_model->search_berita($keyword);
         $data['search_berita_by_kategori'] = $this->Berita_model->search_berita_by_kategori($kategori_get);
-        // var_dump($data['search_berita_by_kategori']);
-        // die;
-
         $data['kategori'] = $this->Kategori_model->get_kategori();
         $data['recent_news'] = $this->Berita_model->sort_berita_date();
+
         $this->load->view('layout/header', $data);
         // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
@@ -53,6 +51,8 @@ class News extends CI_Controller
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
+
+
     public function kurikulum()
     {
         $data['title'] = "Information - Kurikulum";

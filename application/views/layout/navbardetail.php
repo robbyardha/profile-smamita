@@ -74,11 +74,11 @@
                         <i class="far fa-times-circle"></i>
                     </div>
                     <div class="m-brand-logo text-center">
-                        <a href="!#"><img src="assets/img/saas-c/logo/logo.png" alt=""></a>
+                        <a href="!#"><img src="<?= base_url() ?>assets/logo/logonav.png" alt=""></a>
                     </div>
                     <nav class="s2-mobile-main-navigation  clearfix ul-li">
                         <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
-                            <li><a href="#">Home</a></li>
+                            <li><a href="<?= base_url('home') ?>">Home</a></li>
                             <li class="dropdown">
                                 <a href="#">Information</a>
                                 <ul class="dropdown-menu clearfix">

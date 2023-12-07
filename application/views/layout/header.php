@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/odometer-theme-default.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/side-demo.css">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css">
-
+    <link rel="stylesheet" href="<?= base_url() ?>assets/css/home.css">
 
     <!-- PHOTOSWIPE -->
     <!-- Core CSS file -->

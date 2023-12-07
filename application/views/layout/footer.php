@@ -18,6 +18,7 @@
 <script src="<?= base_url() ?>assets/js/side-demo.js"></script>
 <script src="<?= base_url() ?>assets/plugin/owlcarousel/owlcarousel.js"></script>
 <script src="<?= base_url() ?>assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 
@@ -109,6 +110,23 @@
         });
 
     });
+</script>
+
+<script>
+    function copyToClipboard() {
+
+        let copyText = document.getElementById('baseUrl')
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(copyText.value);
+        Swal.fire(
+            'Berhasil!!!',
+            'URL berhasil dicopy & ditambahkan ke papan klip!',
+            'success'
+        );
+
+    }
 </script>
 
 </body>
