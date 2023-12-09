@@ -120,6 +120,7 @@
         copyText.select();
         copyText.setSelectionRange(0, 99999);
         navigator.clipboard.writeText(copyText.value);
+
         Swal.fire(
             'Berhasil!!!',
             'URL berhasil dicopy & ditambahkan ke papan klip!',

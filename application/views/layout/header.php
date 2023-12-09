@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,15 @@
     <meta name="keywords" content="SMAM1TA, smamita, SMA Muhammadiyah 1 Taman, The Excellent School">
     <meta name="author" content="SMA Muhammadiyah 1 Taman">
     <meta name="description" content="SMA Muhammadiyah 1 Taman - Profile">
+
+    <?php if (!empty($title_url)  && !empty($url_img)  && !empty($url_web)) : ?>
+        <meta property="og:title" content="<?= $title_url ?>" />
+        <meta property="og:image" content="<?= $url_img ?>" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:url" content="<?= $url_web ?>" />
+
+    <?php endif; ?>
+
     <link rel="shortcut icon" href="<?= base_url() ?>assets/logo/barbar.png" type="image/x-icon">
     <link rel="icon" href="<?= base_url() ?>assets/logo/barbar.png" type="image/x-icon">
     <link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.min.css">

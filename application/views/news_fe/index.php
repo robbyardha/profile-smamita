@@ -40,7 +40,7 @@
                                     <div class="row">
                                         <div class="col-lg-6 col-md-12 col-sm-12">
                                             <div class="saasio-blog-img">
-                                                <img src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
+                                                <img class="img-custom-news-home" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-12 col-sm-12">

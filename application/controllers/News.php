@@ -33,9 +33,11 @@ class News extends CI_Controller
 
         $data['title'] = "Detail News - SMAM1TA";
         $data['berita_slug'] = $this->Berita_model->get_berita_slug($slug_berita);
-        $data['slug'] = $slug_berita;
-        // var_dump($data['berita_slug']);
-        // die();
+
+        $data['title_url'] = $data['berita_slug']['headline'];
+        $data['url_img'] = base_url('assets/backend/img/berita_images/') . $data['berita_slug']['image_berita'];
+        $data['url_web'] = base_url('news/detail/') . $slug_berita;
+
         $data['berita'] = $this->Berita_model->get_berita();
         $keyword = $this->input->get('keyword');
         $kategori_get = $this->input->get('kategori');

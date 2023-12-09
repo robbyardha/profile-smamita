@@ -28,8 +28,8 @@
                                                                                 echo ($new_date) ?></a>
                                 <a href="#"><i class="fas fa-user"></i> <?= $berita_slug['penulis'] ?></a>
 
-                                <a href="javacript:void(0)" onclick="copyToClipboard()"><i class="fab fa-whatsapp"></i> SHARE WHATSAPP</a>
-                                <input style="opacity: 0;" id="baseUrl" value="<?= base_url('news/detail/') . $slug ?>">
+                                <a href="javascript:void(0)" onclick="copyToClipboard()"><i class="fab fa-whatsapp"></i> SHARE WHATSAPP</a>
+                                <input style="opacity: 0;" id="baseUrl" value="<?= $url_web ?>">
                             </div>
 
                             <article class="text-justify-custom-news">
