@@ -68,6 +68,7 @@
                                     </div>
                                 </div>
                             </div>
+
                         <?php endforeach ?>
                     <?php elseif ($this->input->get('keyword')) : ?>
                         <?php if ($search_berita == null) : ?>
@@ -236,5 +237,7 @@
                 </div>
             </div>
         </div>
+        <?= $this->pagination->create_links(); ?>
+
     </div>
 </section>

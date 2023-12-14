@@ -8,6 +8,20 @@ class Berita_model extends CI_Model
         return $this->db->get_where('berita', ['is_active' => 1])->result_array();
     }
 
+    public function get_berita_pagination($batas, $mulai)
+    {
+        $this->db->order_by('tanggal_publikasi', "DESC");
+        $this->db->where('is_active', 1);
+        $query = $this->db->get('berita', $batas, $mulai);
+
+        return $query->result_array();
+    }
+
+    public function total_All_News()
+    {
+        return $this->db->get('berita')->num_rows();
+    }
+
     public function get_berita_id($id)
     {
         if ($id == NULL) {
