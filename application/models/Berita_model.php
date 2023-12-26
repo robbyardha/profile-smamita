@@ -8,6 +8,14 @@ class Berita_model extends CI_Model
         return $this->db->get_where('berita', ['is_active' => 1])->result_array();
     }
 
+    public function get_berita_limit_tiga()
+    {
+        $this->db->order_by('tanggal_publikasi', "DESC");
+        $this->db->limit(3);
+        return $this->db->get_where('berita', ['is_active' => 1])->result_array();
+    }
+
+
     public function get_berita_pagination($batas, $mulai)
     {
         $this->db->order_by('tanggal_publikasi', "DESC");
@@ -218,9 +226,11 @@ class Berita_model extends CI_Model
     public function hapus()
     {
         $id = htmlspecialchars($this->input->post('id'));
-        $this->db->set('is_active', 0);
+        // $this->db->set('is_active', 0);
+        // $this->db->where('id', $id);
+        // $this->db->update('berita');
         $this->db->where('id', $id);
-        $this->db->update('berita');
+        $this->db->delete('berita');
         // var_dump($this->db->last_query());
         // die;
     }

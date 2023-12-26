@@ -198,6 +198,64 @@
 </section>
 <!-- Visi misi -->
 
+<!-- News new 3 -->
+<section id="newnews" class="appseo-service-section position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="text-center appseo-section-title2 appseo-headline pera-content">
+                    <p>News</p>
+                </div>
+            </div>
+            <?php foreach ($berita as $b) : ?>
+                <div class="col-lg-4">
+                    <div class="card">
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="saasio-blog-img">
+                                    <img class="img-custom-news-home" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
+                                </div>
+                            </div>
+                            <div class=" col-lg-6 col-md-12 col-sm-12">
+                                <div class="saasio-blog-text">
+                                    <h5><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h5>
+                                    <div class="saasio-post-meta">
+                                        <a href="#"><i class="fas fa-calendar-alt"></i> <?php $tanggal = $b['tanggal_publikasi'];
+                                                                                        $new_date = date('d F Y', strtotime($tanggal));
+                                                                                        echo ($new_date) ?></a>
+                                        <a href="#"><i class="fas fa-user"></i> <?= $b['penulis'] ?></a>
+                                    </div>
+                                    <?php
+                                    require_once("./vendor/html2text/html2text/src/Html2Text.php");
+                                    $html = new \Html2Text\Html2Text($b['konten']);
+                                    ?>
+                                    <?php
+                                    $word = $html->getText();
+                                    ?>
+                                    <p style="text-align: justify ;">
+                                        <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+                                    </p>
+                                    <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+
+        </div>
+        <div class="appseo-section-title text-center appseo-headline pera-content position-relative">
+
+        </div>
+
+    </div>
+    <div class="appseo-service-vector" data-parallax='{"y" : 100, "rotateY":500}'>
+        <img src="assets/img/seo//shape/st.png" alt="">
+    </div>
+</section>
+<!-- Visi misi -->
+
 <br>
 <div class="float-right">
 

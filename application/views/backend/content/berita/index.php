@@ -158,14 +158,14 @@
                                 <!-- Modal Hapus -->
                                 <div class="modal fade" id="hapus_modal<?= $pn['id'] ?>" tabindex="-1" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
-                                        <form action="<?= base_url('buku/hapus') ?>" method="post">
+                                        <form action="<?= base_url('berita/hapus') ?>" method="post">
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="exampleModalLabel1">Hapus Buku</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <p>Apakah anda yakin menghapus data <b><?= $pn['judul'] ?> ?</b> </p>
+                                                    <p>Apakah anda yakin menghapus data berita <b><?= $pn['headline'] ?> ?</b> </p>
 
                                                     <p>Data yang dihapus tidak dapat dikembalikan.</p>
                                                 </div>

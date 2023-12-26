@@ -18,13 +18,10 @@ class Berita extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Berita";
         $data['berita'] = $this->Berita_model->get_berita();
-        // var_dump($data['join_buku_new']);
-        // var_dump($data['join_buku']);
-        // die;
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);
@@ -158,12 +155,12 @@ class Berita extends CI_Controller
         );
 
         if ($this->form_validation->run() == FALSE) {
-            $this->session->set_flashdata('message_error', 'Terdapat data yang kosong. Silahkan lengkapi data');
-            redirect('film');
+            $this->session->set_flashdata('message_error', 'Data Gagal Di Hapus');
+            redirect('berita');
         } else {
-            $this->Film_model->hapus();
+            $this->Berita_model->hapus();
             $this->session->set_flashdata('message', 'Data Berhasil dihapus');
-            redirect('film');
+            redirect('berita');
         }
     }
 
