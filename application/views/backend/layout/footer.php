@@ -104,62 +104,20 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 
-<!-- 
 <script>
-    $(document).ready(function() {
-        $('.dropify').dropify({
-            messages: {
-                'default': 'Drag and drop a file here or click to upload',
-                'replace': 'Drag and drop or click to replace',
-                'remove': 'Remove',
-                'error': 'Ooops, something wrong happended.'
-            }
-        });
-    });
-</script> -->
-<!-- <script>
-    ClassicEditor
-        .create(document.querySelector('.ckeditor'))
-        .catch(error => {
-            console.error(error);
-        });
-    ClassicEditor.config.height = 500; // 500 pixels high.
-    ClassicEditor.config.height = '25em';
-</script> -->
-<!-- <script>
-    DecoupledEditor
-        .create(document.querySelector('#editor'))
-        .catch(error => {
-            console.error(error);
-        });
-</script> -->
-<!-- <script>
-    $(document).ready(function() {
-        $('#summernote').summernote();
-    });
-</script> -->
-<script>
+    CKEDITOR.replace('editor1');
+
     CKEDITOR.replace('editor', {
         height: 300,
-        // CKEDITOR.replace('.ckeditor', {
+
         filebrowserUploadUrl: '<?= base_url('berita/ck_editor_uploadimg') ?>',
         filebrowserUploadMethod: 'form'
-        // extraPlugins = 'imageuploader, uploadimage, filebrowser',
-        // extraPlugins: 'imageuploader',
-        // extraPlugins: 'uploadimage',
-        // extraPlugins: 'filebrowser',
-        // extraPlugins = 'filebrowser',
-        // uploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files&responseType=json',
 
-        // Configure your file manager integration. This example uses CKFinder 3 for PHP.
-        // filebrowserBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html',
-        // filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html?type=Images',
-        // filebrowserUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files',
-        // filebrowserImageUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Images',
     });
 </script>
 <script>
     $(document).ready(function() {
+
         $('.datatables').DataTable();
         $('.select2').select2();
         $('.select2-multiple').select2();
@@ -168,17 +126,7 @@
             dateFormat: "Y-m-d",
         });
 
-        // $('.dropify').dropify();
 
-
-        // $('.dropify').dropify({
-        //     messages: {
-        //         'default': 'Drag and drop a file here or click to upload',
-        //         'replace': 'Drag and drop or click to replace',
-        //         'remove': 'Remove',
-        //         'error': 'Ooops, something wrong happended.'
-        //     }
-        // });
     });
 </script>
 

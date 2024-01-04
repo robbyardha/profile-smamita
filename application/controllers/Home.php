@@ -14,6 +14,9 @@ class Home extends CI_Controller
         $data['title'] = "SMA Muhammadiyah 1 Taman - Profile";
         $data['kepsek'] = "Drs.Zainal Arif Fakhrudi, M.M.";
         $data['config_direktur'] = $this->Configuration_model->get_direktur();
+        $data['konfigurasi_profile'] = $this->Configuration_model->get_config();
+        $data['visi_misi'] = $this->Configuration_model->get_visi_misi();
+
         $data['berita'] = $this->Berita_model->get_berita_limit_tiga();
 
 

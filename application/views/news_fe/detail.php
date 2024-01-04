@@ -29,18 +29,12 @@
                                                                                 echo ($new_date) ?></a>
                                 <a href="#"><i class="fas fa-user"></i> <?= $berita_slug['penulis'] ?></a>
 
-                                <a href="javascript:void(0)" onclick="copyToClipboard()"><i class="fab fa-whatsapp"></i> SHARE WHATSAPP</a>
+                                <a href="javascript:void(0)" id="copyToClipBoard"><i class="fab fa-whatsapp"></i> SHARE WHATSAPP</a>
                                 <input style="opacity: 0;" id="baseUrl" value="<?= $url_web ?>">
                             </div>
 
                             <article class="text-justify-custom-news">
-                                <?php
-                                require_once("./vendor/html2text/html2text/src/Html2Text.php");
-                                $html = new \Html2Text\Html2Text($berita_slug['konten']);
-                                $word = $html->getText();
-
-                                ?>
-                                <?= $word ?>
+                                <?= convertHtmlToText($berita_slug['konten']) ?>
                             </article>
                         </div>
 

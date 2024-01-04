@@ -18,8 +18,9 @@
 <script src="<?= base_url() ?>assets/js/side-demo.js"></script>
 <script src="<?= base_url() ?>assets/plugin/owlcarousel/owlcarousel.js"></script>
 <script src="<?= base_url() ?>assets/js/script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 
 
 <script>
@@ -113,21 +114,33 @@
 </script>
 
 <script>
-    function copyToClipboard() {
+    $(document).ready(function() {
 
-        let copyText = document.getElementById('baseUrl')
+        var clipboard = new ClipboardJS('#copyToClipBoard', {
+            target: function(trigger) {
+                return document.querySelector('#baseUrl')
+            }
+        });
 
-        copyText.select();
-        copyText.setSelectionRange(0, 99999);
-        navigator.clipboard.writeText(copyText.value);
+        clipboard.on('success', function(url) {
+            Swal.fire(
+                'Berhasil!!!',
+                'URL berhasil dicopy & ditambahkan ke papan klip!',
+                'success'
+            );
 
-        Swal.fire(
-            'Berhasil!!!',
-            'URL berhasil dicopy & ditambahkan ke papan klip!',
-            'success'
-        );
+            url.clearSelection();
+        });
 
-    }
+        clipboard.on('error', function(url) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Copy gagal. Silakan tekan Ctrl+C atau Command+C secara manual",
+
+            });
+        })
+    })
 </script>
 
 </body>

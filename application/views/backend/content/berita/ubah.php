@@ -46,43 +46,14 @@
 
 
                     <?php
-                    // var_dump($kategori[1]);
-                    // var_dump($genre['genre']);
-                    // var_dump($film_id['genre']);
 
                     $arr_kategori_comma_db = explode(',', $berita_id['kategori']);
 
                     $trimmed_array = array_map('trim', $arr_kategori_comma_db);
-                    // var_dump($trimmed_array);
 
-                    // $new_arry_kategori = [];
-                    // for ($i = 0; $i < sizeof($kategori); $i++) {
-                    //     $new =  $kategori[$i];
-                    //     array_push($new_arry_kategori, $new['kategori']);
-                    // }
-                    // var_dump($new_arry_kategori);
-
-
-                    // for ($i = 0; $i < sizeof($genre['genre']); $i++) {
-                    //     $new =  $genre['genre'][$i];
-                    // }
-                    // for ($j = 0; $j < sizeof($arr_genre_film_db); $j++) {
-                    //     $msadm = $arr_genre_film_db[$j];
-                    // }
-                    // $inter = array_intersect($trimmed_array, $genre['genre']);
-                    // $in_arr = in_array($trimmed_array, $genre['genre']);
-                    // var_dump($inter);
-                    // var_dump($in_arr);
-                    // die;
-
-                    // die;
                     ?>
 
-                    <?php
-                    // if (array_intersect($trimmed_array, $genre['genre'])) {
-                    //     echo "sama";
-                    // }
-                    ?>
+
 
                     <div class="row g-2">
                         <div class="col mb-3">

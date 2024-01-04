@@ -94,3 +94,13 @@ function analyze()
     $result_count = $lib_codeigniter->db->query($query);
     return $result_count->result_array();
 }
+
+function convertHtmlToText($text)
+{
+    require_once("./vendor/html2text/html2text/src/Html2Text.php");
+
+    $html = new \Html2Text\Html2Text($text);
+    $word = $html->getText();
+
+    return $word;
+}

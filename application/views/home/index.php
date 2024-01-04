@@ -97,14 +97,10 @@
                     <p>Profile SMA Muhammadiyah 1 Taman</p>
                     <h2>Profile</h2>
                 </div>
-                <p class="text-justify">SMAMITA Sidoarjo telah mengalami perjalanan panjang, berdiri pada tahun 1984, SMAMITA telah melalui berbagai rintangan baik yang sifatnya mikro maupun makro. Dengan berbekal disiplin serta pengembangan dan peningkatan mutu pendidikan, menjadikan masuyarakat Sidoarjo semakin percaya kepada SMAMITA..kepercayaan ini berkembang terus sehingga SMAMITA mulai mendapatkan peserta didik melebihi pagu (kuota) yang disiapkan.
-                    Pada usianya yang sudah cukup dewasa ini SMAMITA terus melakukan pembenahan dan pengembangan serta pembaharuan (developmend reform) di berbagai bidang, baik sarana prasarana, kurikulum pendidikan dan pembelajaran, sember daya pelaksana maupun kultur yang dikembangkan sekolah. Berbagai langkah riil yang dilakukan dmaksudkan untuk menjadikan SMAMITA sekolah yang bonafit (the excellent school) yang membangun tradisi keilmuan dan spiritualitas keislaman sehingga dapat mengantarkan civitas sekolah menjadi manusia yang sholeh dalam prilaku dan unggul dalam mutu dengan keimanan dan ketaqwaan yang kokoh, wawasan keilmuan yang modern serta kecakapan hidup (life skill) dan akhlaqul karimah yang menghiasi prilaku kesehariannya.
-                    Upaya pengembangan dan pembaharuan (development and reform) yang dilakukan SMAMITA tidak hanya berdampak pada semakin meningkatnya kepercayaan masyarakat untuk menyekolahkan putra – putrinya di SMAMITA tapi juga berimbas pada terangkatnya status akreditasi sekolah secara kelembagaan dengan “Akreditasi A”.
-                    Dengan status akreditsi A itu semakin memposisikan SMAMITA pada jajaran sekolah – sekolah modern di lingkungankabupaten Sidoarjo.
-                    Pada tahun pelajaran 2017 / 2018 ini menerapkan kurikulum 2013 dengan menawarkan 2 (dua) program peminatan yang bersifat intrakurikuler yaitu (1) peminatan Matematika dan Ilmu Alam (MIPA (2) peminatan ilmu sosial (IPS). Selain itu juga tersedia puluhan program peminatan yang bersifat ekstrakurikuler yang diklasifikasikan dalam kelompok KeIslaman, kesenian, keolahragaan, ilm pengetahuan dan tehnologi, kepanduan dan sosial.</p>
+                <p class="text-justify"><?= $konfigurasi_profile['about'] ?></p>
             </div>
             <div class="col-lg-4">
-                <img src="<?= base_url() ?>assets/section/profileassets.png" class="img-fluid" alt="">
+                <img src="<?= base_url('assets/backend/img/foto_profile_siswa/') . $konfigurasi_profile['img_profile'] ?>" class="img-fluid" alt="">
             </div>
         </div>
     </div>
@@ -115,76 +111,59 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <img src="<?= base_url() ?>assets/section/visi.png" class="img-fluid" alt="">
+                <img src="<?= base_url('assets/backend/img/foto_visi_dan_misi/') . $visi_misi['img_vision_mision'] ?>" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8">
                 <div class="appseo-section-title2 appseo-headline pera-content ">
                     <p>Vision & Mission SMA Muhammadiyah 1 Taman</p>
                     <h2>Vision & Mission</h2>
-                    <div id="accordion">
+                </div>
 
-                        <div class="card">
-                            <div class="card-header collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <h5 class="mb-0 ">
-                                    3 Pilar Utama
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>Excellent Islamic Culture</li>
-                                        <li>Excellent Academic Quality</li>
-                                        <li>Global Insight</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <br>
-
-                        <div class="card">
-                            <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <h5 class="mb-0">
-                                    Vision
-                                </h5>
-                            </div>
-
-                            <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sholeh Dalam Perilaku,Unggul Dalam Mutu dan Berdaya Saing Global
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <br>
-
-                        <div class="card">
-                            <div class="card-header collapsed" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <h5 class="mb-0">
-                                    Mission
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="card-body">
-                                    <ol>
-                                        <li>Menumbuhkan kesadaran seluruh warga sekolah untuk melaksanakan perintah Allah dan menjauhi larangan-Nya</li>
-                                        <li>Mewujudkan generasi islam yang santun dalam berperilaku dan gemar beribadah</li>
-                                        <li>Mengelolah dan mengembangkan pendidikan yang berakhalakul karimah</li>
-                                        <li>Mengembangkan potensi akademik dengan menyediakan fasilitas belajar mengajar dan teknologi informasi</li>
-                                        <li>Mengoptimalkan pelayanan akademik dan administratif</li>
-                                        <li>mengoptimalkan proses pembelajaran dan bimbingan intensif kepada putra didik</li>
-                                        <li>Membina kemandirian dalam melaksanakan segala kegiatan</li>
-                                        <li>Membangun kerjasama dengan lembaga luar negeri</li>
-                                        <li>Meningkatkan kemampuan bahasa asing</li>
-                                        <li>Meningkatkan kunjungan dan pertukaran siswa dan guru, dengan sekolahan luar negeri</li>
-
-                                    </ol>
-                                </div>
-                            </div>
+                <div class="card">
+                    <div class="card-header collapsed" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <h5 class="mb-0 ">
+                            3 Pilar Utama
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <?= convertHtmlToText($visi_misi['summary']) ?>
                         </div>
                     </div>
                 </div>
+
+                <br>
+
+                <div class="card">
+                    <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h5 class="mb-0">
+                            Vision
+                        </h5>
+                    </div>
+
+                    <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body">
+                            <?= convertHtmlToText($visi_misi['vision']) ?>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br>
+                <div class="card">
+                    <div class="card-header collapsed" id="headingThree" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <h5 class="mb-0">
+                            Mission
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+
+                            <?= convertHtmlToText($visi_misi['mision'])  ?>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         <div class="appseo-section-title text-center appseo-headline pera-content position-relative">
@@ -203,41 +182,41 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div class="text-center appseo-section-title2 appseo-headline pera-content">
+                <div class=" appseo-section-title2 appseo-headline pera-content">
                     <p>News</p>
                 </div>
             </div>
             <?php foreach ($berita as $b) : ?>
                 <div class="col-lg-4">
-                    <div class="card">
+                    <div class="card mb-2">
 
-                        <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="card-header">
+                            <div class=" col-lg-12 mb-3">
                                 <div class="saasio-blog-img">
                                     <img class="img-custom-news-home" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
                                 </div>
                             </div>
-                            <div class=" col-lg-6 col-md-12 col-sm-12">
-                                <div class="saasio-blog-text">
-                                    <h5><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h5>
-                                    <div class="saasio-post-meta">
-                                        <a href="#"><i class="fas fa-calendar-alt"></i> <?php $tanggal = $b['tanggal_publikasi'];
-                                                                                        $new_date = date('d F Y', strtotime($tanggal));
-                                                                                        echo ($new_date) ?></a>
-                                        <a href="#"><i class="fas fa-user"></i> <?= $b['penulis'] ?></a>
-                                    </div>
-                                    <?php
-                                    require_once("./vendor/html2text/html2text/src/Html2Text.php");
-                                    $html = new \Html2Text\Html2Text($b['konten']);
-                                    ?>
-                                    <?php
-                                    $word = $html->getText();
-                                    ?>
-                                    <p style="text-align: justify ;">
-                                        <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
-                                    </p>
-                                    <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
+                        </div>
+                        <div class="col-lg-12 px-4 text-justify-custom-news ">
+                            <div class="saasio-blog-text">
+                                <h5 class="mb-3 mt-2 text-center"><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h5>
+                                <div class="saasio-post-meta mb-3">
+                                    <a href="#"><i class="fas fa-calendar-alt"></i> <?php $tanggal = $b['tanggal_publikasi'];
+                                                                                    $new_date = date('d F Y', strtotime($tanggal));
+                                                                                    echo ($new_date) ?></a>
+                                    <a href="#"><i class="fas fa-user"></i> <?= $b['penulis'] ?></a>
                                 </div>
+                                <?php
+                                require_once("./vendor/html2text/html2text/src/Html2Text.php");
+                                $html = new \Html2Text\Html2Text($b['konten']);
+                                ?>
+                                <?php
+                                $word = $html->getText();
+                                ?>
+                                <p style="text-align: justify ;">
+                                    <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+                                </p>
+                                <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -254,7 +233,7 @@
         <img src="assets/img/seo//shape/st.png" alt="">
     </div>
 </section>
-<!-- Visi misi -->
+<!-- News new 3 -->
 
 <br>
 <div class="float-right">

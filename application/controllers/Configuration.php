@@ -16,11 +16,11 @@ class Configuration extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Configuration Apps";
         $data['config_app'] = $this->Configuration_model->get_config();
         $data['direktur'] = $this->Configuration_model->get_direktur();
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);
@@ -226,6 +226,27 @@ class Configuration extends CI_Controller
         } else {
             $this->Configuration_model->update_foto_direktur();
             $this->session->set_flashdata('message', 'Foto Direktur Berhasil Diubah');
+            redirect('configuration');
+        }
+    }
+
+    public function update_foto_profile_siswa()
+    {
+        $this->form_validation->set_rules(
+            'id',
+            'ID',
+            [
+                'required' => '%s harus diisi'
+            ]
+        );
+
+
+        if ($this->form_validation->run() == TRUE) {
+            $this->Configuration_model->update_foto_profile_siswa();
+            $this->session->set_flashdata('message', 'Foto Profile Siswa Berhadil Diubah');
+            redirect('configuration');
+        } else {
+            $this->session->set_flashdata('message_error', 'Terdapat data yang kosong. Lengkapi data untuk merubah');
             redirect('configuration');
         }
     }

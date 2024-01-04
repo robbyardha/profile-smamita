@@ -12,7 +12,7 @@ class News extends CI_Controller
     public function index()
     {
         $data['title'] = "News - SMAM1TA";
-        $config['base_url'] = 'https://profile-dev.smam1ta.sch.id/news/index';
+        $config['base_url'] = base_url('/news/index');
         $config['total_rows'] = $this->Berita_model->total_All_News();
         $config['per_page'] = 8;
         $config['num_links'] = 2;

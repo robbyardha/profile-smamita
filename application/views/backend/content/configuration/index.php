@@ -15,12 +15,9 @@
                 <?= $this->session->flashdata('message_error') ?>
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-        <?php endif ?>
+        <?php endif; ?>
 
-        <?php
-        // var_dump($config_app);
-        // die;
-        ?>
+
         <div class="row">
             <div class="col-xl-4">
                 <div class="card">
@@ -87,6 +84,47 @@
                                                     <label for="desc" class="form-label">Foto Direktur Baru</label>
                                                     <input type="file" id="foto_direktur" name="foto_direktur" accept="image/*" class="form-control" />
                                                     <input type="hidden" id="id" name="id" class="form-control" value="<?= $direktur['id'] ?>" />
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                                Close
+                                            </button>
+                                            <button type="submit" class="btn btn-warning">Ubah Foto</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- End Modal LOGO -->
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5>Foto Profile Siswa</h5>
+                        <img class="img-fluid" src="<?= base_url('assets/backend/img/foto_profile_siswa/') . $config_app['img_profile'] ?>" alt="<?= $config_app['img_profile'] ?>" srcset="">
+
+                        <button class="btn btn-md btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#foto_siswa_profile<?= $config_app['id'] ?>">Ubah Foto</button>
+
+                        <!-- Modal LOGO -->
+                        <div class="modal fade" id="foto_siswa_profile<?= $config_app['id'] ?>" tabindex="-1" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <form action="<?= base_url('configuration/update_foto_profile_siswa') ?>" method="post" enctype="multipart/form-data">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel1">Update Foto Profile Siswa</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row g-2">
+                                                <div class="col mb-0">
+                                                    <label for="desc" class="form-label">Foto Profile Siswa</label>
+                                                    <input type="file" id="foto_profile_siswa" name="foto_profile_siswa" accept="image/*" class="form-control" />
+                                                    <input type="hidden" id="id" name="id" class="form-control" value="<?= $config_app['id'] ?>" />
+                                                    <input type="hidden" name="foto_profile_siswa_lama" value="<?= $config_app['img_profile'] ?>">
 
                                                 </div>
                                             </div>

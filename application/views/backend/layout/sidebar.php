@@ -220,6 +220,14 @@
                      <div data-i18n="Support">Configuration</div>
                  </a>
              </li>
+             <li class="menu-item <?php if ($this->uri->segment(1) == "visi_misi" || $this->uri->segment(1) == "Visi_Misi") {
+                                        echo "active";
+                                    } ?>">
+                 <a href="<?= base_url('visi_misi') ?>" class="menu-link">
+                     <i class="menu-icon tf-icons bx bx-collection"></i>
+                     <div data-i18n="Support">Visi Dan Misi</div>
+                 </a>
+             </li>
 
              <li class="menu-header small text-uppercase">
                  <span class="menu-header-text">Profile</span>
