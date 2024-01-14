@@ -19,14 +19,10 @@ class Humas_be extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
         $data['title'] = "Humas";
         $data['role'] = $this->Role_model->get_role();
         $data['sarpras_profile'] = $this->Sarpras_model->get_sarpras_profile();
         $data['humas_profile'] = $this->Humas_model->get_humas_profile();
-        // var_dump($data['kurikulum_profile']);
-        // die;
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);

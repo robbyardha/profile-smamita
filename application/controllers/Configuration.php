@@ -235,8 +235,9 @@ class Configuration extends CI_Controller
         $this->form_validation->set_rules(
             'id',
             'ID',
+            'required',
             [
-                'required' => '%s harus diisi'
+                'required' => '%s wajib diisi'
             ]
         );
 

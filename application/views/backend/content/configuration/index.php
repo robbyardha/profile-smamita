@@ -123,8 +123,8 @@
                                                 <div class="col mb-0">
                                                     <label for="desc" class="form-label">Foto Profile Siswa</label>
                                                     <input type="file" id="foto_profile_siswa" name="foto_profile_siswa" accept="image/*" class="form-control" />
-                                                    <input type="hidden" id="id" name="id" class="form-control" value="<?= $config_app['id'] ?>" />
-                                                    <input type="hidden" name="foto_profile_siswa_lama" value="<?= $config_app['img_profile'] ?>">
+                                                    <input type="text" id="id" name="id" class="form-control" value="<?= $config_app['id'] ?>" />
+                                                    <input type="text" name="foto_profile_siswa_lama" value="<?= $config_app['img_profile'] ?>">
 
                                                 </div>
                                             </div>

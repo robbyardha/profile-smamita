@@ -100,7 +100,11 @@
                 <p class="text-justify"><?= $konfigurasi_profile['about'] ?></p>
             </div>
             <div class="col-lg-4">
-                <img src="<?= base_url('assets/backend/img/foto_profile_siswa/') . $konfigurasi_profile['img_profile'] ?>" class="img-fluid" alt="">
+                <?php if (empty($konfigurasi_profile['img_profile']) || $konfigurasi_profile['img_profile'] == null) : ?>
+                    <img src="<?= base_url('assets/section/profileassets.png') ?>" class="img-fluid" alt="Siswa SMAM1TA">
+                <?php else : ?>
+                    <img src="<?= base_url('assets/backend/img/foto_profile_siswa/') . $konfigurasi_profile['img_profile'] ?>" class="img-fluid" alt="">
+                <?php endif ?>
             </div>
         </div>
     </div>
@@ -111,7 +115,11 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <img src="<?= base_url('assets/backend/img/foto_visi_dan_misi/') . $visi_misi['img_vision_mision'] ?>" class="img-fluid" alt="">
+                <?php if ($visi_misi['img_vision_mision'] == null || empty($visi_misi['img_vision_mision'])) : ?>
+                    <img src="<?= base_url('assets/section/visi.png') ?>" class="img-fluid" alt="Siswi SMAM1TA Smart">
+                <?php else : ?>
+                    <img src="<?= base_url('assets/backend/img/foto_visi_dan_misi/') . $visi_misi['img_vision_mision'] ?>" class="img-fluid" alt="">
+                <?php endif ?>
             </div>
             <div class="col-lg-8">
                 <div class="appseo-section-title2 appseo-headline pera-content ">
@@ -127,7 +135,15 @@
                     </div>
                     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            <?= convertHtmlToText($visi_misi['summary']) ?>
+                            <?php if ($visi_misi['summary'] == null || empty($visi_misi['summary'])) : ?>
+                                <ul>
+                                    <li>Excellent Islamic Culture</li>
+                                    <li>Excellent Academic Quality</li>
+                                    <li>Global Insight</li>
+                                </ul>
+                            <?php else : ?>
+                                <?= convertHtmlToText($visi_misi['summary']) ?>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>
@@ -143,7 +159,13 @@
 
                     <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            <?= convertHtmlToText($visi_misi['vision']) ?>
+                            <?php if ($visi_misi['vision'] == null || empty($visi_misi['vision'])) : ?>
+
+                                Sholeh Dalam Perilaku,Unggul Dalam Mutu dan Berdaya Saing Global
+
+                            <?php else : ?>
+                                <?= convertHtmlToText($visi_misi['vision']) ?>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>
@@ -158,8 +180,23 @@
                     </div>
                     <div id="collapseThree" class="collapse " aria-labelledby="headingThree" data-parent="#accordion">
                         <div class="card-body">
+                            <?php if (empty($visi_misi['mision']) || $visi_misi['mision'] == null) : ?>
+                                <ol>
+                                    <li>Menumbuhkan kesadaran seluruh warga sekolah untuk melaksanakan perintah Allah dan menjauhi larangan-Nya</li>
+                                    <li>Mewujudkan generasi islam yang santun dalam berperilaku dan gemar beribadah</li>
+                                    <li>Mengelolah dan mengembangkan pendidikan yang berakhalakul karimah</li>
+                                    <li>Mengembangkan potensi akademik dengan menyediakan fasilitas belajar mengajar dan teknologi informasi</li>
+                                    <li>Mengoptimalkan pelayanan akademik dan administratif</li>
+                                    <li>mengoptimalkan proses pembelajaran dan bimbingan intensif kepada putra didik</li>
+                                    <li>Membina kemandirian dalam melaksanakan segala kegiatan</li>
+                                    <li>Membangun kerjasama dengan lembaga luar negeri</li>
+                                    <li>Meningkatkan kemampuan bahasa asing</li>
+                                    <li>Meningkatkan kunjungan dan pertukaran siswa dan guru, dengan sekolahan luar negeri</li>
 
-                            <?= convertHtmlToText($visi_misi['mision'])  ?>
+                                </ol>
+                            <?php else : ?>
+                                <?= convertHtmlToText($visi_misi['mision'])  ?>
+                            <?php endif ?>
                         </div>
                     </div>
                 </div>
@@ -188,36 +225,36 @@
             </div>
             <?php foreach ($berita as $b) : ?>
                 <div class="col-lg-4">
-                    <div class="card mb-2">
 
-                        <div class="card-header">
-                            <div class=" col-lg-12 mb-3">
-                                <div class="saasio-blog-img">
-                                    <img class="img-custom-news-home" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 px-4 text-justify-custom-news ">
+
+
+
+                    <div class="card mb-2" style="height: 40rem;">
+
+                        <img class="card-img-top" style="width: auto; height: 200px;" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
+
+                        <div class="card-body mt-2">
+                            <h6 class="mb-3 mt-2 text-center"><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h6>
                             <div class="saasio-blog-text">
-                                <h5 class="mb-3 mt-2 text-center"><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h5>
                                 <div class="saasio-post-meta mb-3">
                                     <a href="#"><i class="fas fa-calendar-alt"></i> <?php $tanggal = $b['tanggal_publikasi'];
                                                                                     $new_date = date('d F Y', strtotime($tanggal));
                                                                                     echo ($new_date) ?></a>
                                     <a href="#"><i class="fas fa-user"></i> <?= $b['penulis'] ?></a>
                                 </div>
-                                <?php
-                                require_once("./vendor/html2text/html2text/src/Html2Text.php");
-                                $html = new \Html2Text\Html2Text($b['konten']);
-                                ?>
-                                <?php
-                                $word = $html->getText();
-                                ?>
-                                <p style="text-align: justify ;">
-                                    <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+
+                                <p style="text-align: justify ; font-family: Arial, Helvetica, sans-serif;">
+                                    <?php
+                                    $konten = convertHtmlToText($b['konten']);
+                                    echo (truncateString($konten, 500));
+                                    ?>
                                 </p>
-                                <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
+                                <a class="blog-read-more mb-4" href=""></a>
                             </div>
+                        </div>
+
+                        <div class="card-footer text-body-secondary">
+                            <a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>" class="btn btn-sm btn-primary">Read More</a>
                         </div>
                     </div>
                 </div>

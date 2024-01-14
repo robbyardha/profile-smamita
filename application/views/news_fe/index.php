@@ -35,13 +35,13 @@
                 <div class="col-md-8">
                     <?php if ($this->input->get() == NULL) : ?>
                         <?php foreach ($berita as $b) : ?>
+
+
                             <div class="blog-feed-post">
                                 <div class="blog-feed-img-txt">
                                     <div class="row">
                                         <div class="col-lg-6 col-md-12 col-sm-12">
-                                            <div class="saasio-blog-img">
-                                                <img class="img-custom-news-home" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
-                                            </div>
+                                            <img class="img-fluid h-100" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
                                         </div>
                                         <div class="col-lg-6 col-md-12 col-sm-12">
                                             <div class="saasio-blog-text">
@@ -52,24 +52,23 @@
                                                                                                     echo ($new_date) ?></a>
                                                     <a href="#"><i class="fas fa-user"></i> <?= $b['penulis'] ?></a>
                                                 </div>
-                                                <?php
-                                                require_once("./vendor/html2text/html2text/src/Html2Text.php");
-                                                $html = new \Html2Text\Html2Text($b['konten']);
-                                                ?>
-                                                <?php
-                                                $word = $html->getText();
-                                                ?>
-                                                <p style="text-align: justify ;">
-                                                    <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+
+                                                <p style="text-align: justify ; ">
+                                                    <?php
+                                                    $konten = convertHtmlToText($b['konten']);
+                                                    echo (truncateString($konten, 500));
+                                                    ?>
                                                 </p>
+                                            </div>
+                                            <div id="blog-read-more" style="margin-top: auto !important;" class="blog-read-more " style="color: #6c2b95;">
                                                 <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         <?php endforeach ?>
+
                     <?php elseif ($this->input->get('keyword')) : ?>
                         <?php if ($search_berita == null) : ?>
                             <div class="alert alert-danger" role="alert">
@@ -77,13 +76,13 @@
                             </div>
                         <?php else : ?>
                             <?php foreach ($search_berita as $sb) : ?>
+
+
                                 <div class="blog-feed-post">
                                     <div class="blog-feed-img-txt">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12 col-sm-12">
-                                                <div class="saasio-blog-img">
-                                                    <img src="<?= base_url('assets/backend/img/berita_images/') . $sb['image_berita'] ?>" alt="">
-                                                </div>
+                                                <img class="img-fluid h-100" src="<?= base_url('assets/backend/img/berita_images/') . $sb['image_berita'] ?>" alt="">
                                             </div>
                                             <div class="col-lg-6 col-md-12 col-sm-12">
                                                 <div class="saasio-blog-text">
@@ -94,32 +93,22 @@
                                                                                                         echo ($new_date) ?></a>
                                                         <a href="#"><i class="fas fa-user"></i> <?= $sb['penulis'] ?></a>
                                                     </div>
-                                                    <?php
-                                                    require_once("./vendor/html2text/html2text/src/Html2Text.php");
-                                                    // $html = new \Html2Text\Html2Text('Hello, &quot;<b>world</b>&quot;');
-                                                    $html = new \Html2Text\Html2Text($sb['konten']);
 
-                                                    //echo $html->getText();  // Hello, "WORLD"
-                                                    ?>
-                                                    <?php
-                                                    // $word = strlen($html->getText() > 55);
-                                                    //$new_word = mb_substr($html->getText(), 0, 100) . "....";
-                                                    // var_dump($new_word);
-                                                    // die;
-                                                    // var_dump(strip_tags($html->getText()));
-                                                    // substr($html->getText(), 0, 100)
-                                                    // die;
-                                                    $word = $html->getText();
-                                                    ?>
-                                                    <p style="text-align: justify ;">
-                                                        <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+                                                    <p style="text-align: justify ; ">
+                                                        <?php
+                                                        $konten = convertHtmlToText($sb['konten']);
+                                                        echo (truncateString($konten, 500));
+                                                        ?>
                                                     </p>
+                                                </div>
+                                                <div id="blog-read-more" style="margin-top: auto !important;" class="blog-read-more " style="color: #6c2b95;">
                                                     <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $sb['slug_berita'] ?>">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             <?php endforeach ?>
                         <?php endif; ?>
                     <?php elseif ($this->input->get('kategori')) : ?>
@@ -128,14 +117,13 @@
                                 Maaf Berita Di Kategori Masih Kosong, Silahkan memilih kategori yang lain
                             </div>
                         <?php else : ?>
+
                             <?php foreach ($search_berita_by_kategori as $sbbykat) : ?>
                                 <div class="blog-feed-post">
                                     <div class="blog-feed-img-txt">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-12 col-sm-12">
-                                                <div class="saasio-blog-img">
-                                                    <img src="<?= base_url('assets/backend/img/berita_images/') . $sbbykat['image_berita'] ?>" alt="">
-                                                </div>
+                                                <img class="img-fluid h-100" src="<?= base_url('assets/backend/img/berita_images/') . $sbbykat['image_berita'] ?>" alt="">
                                             </div>
                                             <div class="col-lg-6 col-md-12 col-sm-12">
                                                 <div class="saasio-blog-text">
@@ -146,32 +134,22 @@
                                                                                                         echo ($new_date) ?></a>
                                                         <a href="#"><i class="fas fa-user"></i> <?= $sbbykat['penulis'] ?></a>
                                                     </div>
-                                                    <?php
-                                                    require_once("./vendor/html2text/html2text/src/Html2Text.php");
-                                                    // $html = new \Html2Text\Html2Text('Hello, &quot;<b>world</b>&quot;');
-                                                    $html = new \Html2Text\Html2Text($sbbykat['konten']);
 
-                                                    //echo $html->getText();  // Hello, "WORLD"
-                                                    ?>
-                                                    <?php
-                                                    // $word = strlen($html->getText() > 55);
-                                                    //$new_word = mb_substr($html->getText(), 0, 100) . "....";
-                                                    // var_dump($new_word);
-                                                    // die;
-                                                    // var_dump(strip_tags($html->getText()));
-                                                    // substr($html->getText(), 0, 100)
-                                                    // die;
-                                                    $word = $html->getText();
-                                                    ?>
-                                                    <p style="text-align: justify ;">
-                                                        <?= strip_tags(substr($word, 0, 155)) . "......"  ?>
+                                                    <p style="text-align: justify ; ">
+                                                        <?php
+                                                        $konten = convertHtmlToText($sbbykat['konten']);
+                                                        echo (truncateString($konten, 500));
+                                                        ?>
                                                     </p>
+                                                </div>
+                                                <div id="blog-read-more" style="margin-top: auto !important;" class="blog-read-more " style="color: #6c2b95;">
                                                     <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $sbbykat['slug_berita'] ?>">Read More</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             <?php endforeach ?>
                         <?php endif; ?>
                     <?php else : ?>
