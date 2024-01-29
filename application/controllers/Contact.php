@@ -10,7 +10,6 @@ class Contact extends CI_Controller
     {
         $data['title'] = "Contact";
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('contact/index', $data);
         $this->load->view('layout/footname', $data);

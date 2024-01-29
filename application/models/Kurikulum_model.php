@@ -84,6 +84,7 @@ class Kurikulum_model extends CI_Model
 
     public function tambah_struktur()
     {
+
         date_default_timezone_set('Asia/Jakarta');
         $nama = htmlspecialchars($this->input->post('nama'));
         $divisi = htmlspecialchars($this->input->post('divisi'));
@@ -103,11 +104,6 @@ class Kurikulum_model extends CI_Model
 
             $this->upload->initialize($config);
 
-            // if (!empty($_FILES['filefoto']['name'])) {
-            // } else {
-            //     $this->session->set_flashdata('message_error', 'Kamu Belum Memilih File Foto');
-            //     redirect('kurikulum_be/struktur');
-            // }
 
             if ($this->upload->do_upload('foto')) {
                 $foto_source = $this->upload->data();
@@ -150,23 +146,10 @@ class Kurikulum_model extends CI_Model
                     $this->image_lib->rotate();
                 }
 
-                // $config['image_library'] = 'gd2';
 
-                // $config['create_thumb'] = FALSE;
                 $config['maintain_ratio'] = TRUE;
                 $config['quality'] = '85%';
-                // $config['width'] = 600;
-                // $config['height'] = 400;
-                // $config['orientation'] = 'portrait';
-                // $config['rotation_angle'] = '270';
-                // $config['rotation_angle']='180';
-                // $config['rotation_angle']='90';
-                // $config['master_dim'] = 'auto';
-                // $config['master_dim'] = 'height';
                 $config['new_image'] = './assets/file_upload/kurikulum/struktur/' . $foto_source['file_name'];
-                // $this->load->library('image_lib', $config);
-                // $this->image_lib->resize();
-                // $foto_resized = $foto_source['file_name'];
                 $foto_new = $this->upload->data('file_name');
             } else {
                 echo $this->upload->display_errors();
@@ -253,15 +236,6 @@ class Kurikulum_model extends CI_Model
                 $this->session->set_flashdata('message_error', 'Kamu Belum Memilih File Foto');
                 redirect('kurikulum_be/struktur');
             }
-
-
-            // if ($this->upload->do_upload('foto')) {
-            //     $foto_new = $this->upload->data('file_name');
-            //     $this->db->set('foto', $foto_new);
-            // } else {
-            //     $this->session->set_flashdata('message_error', 'Kamu Belum Memilih File Foto');
-            //     redirect('kurikulum_be/struktur');
-            // }
         }
 
         $this->db->set('nama', $nama);

@@ -17,13 +17,11 @@ class Kesiswaan_be extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Kesiswaan";
         $data['role'] = $this->Role_model->get_role();
         $data['kesiswaan_profile'] = $this->Kesiswaan_model->get_kesiswaan_profile();
-        // var_dump($data['kurikulum_profile']);
-        // die;
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);
@@ -101,15 +99,13 @@ class Kesiswaan_be extends CI_Controller
 
     public function struktur()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Kesiswaan Struktur";
         $data['role'] = $this->Role_model->get_role();
         $data['kurikulum_profile'] = $this->Kurikulum_model->get_kurikulum_profile();
         $data['kurikulum_struktur'] = $this->Kurikulum_model->get_kurikulum_struktur();
         $data['kesiswaan_struktur'] = $this->Kesiswaan_model->get_kesiswaan_struktur();
-        // var_dump($data['kurikulum_profile']);
-        // die;
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);

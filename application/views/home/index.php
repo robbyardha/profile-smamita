@@ -215,6 +215,12 @@
 <!-- Visi misi -->
 
 <!-- News new 3 -->
+<style>
+    .img-home-berita {
+        width: auto;
+        height: 300px;
+    }
+</style>
 <section id="newnews" class="appseo-service-section position-relative">
     <div class="container">
         <div class="row">
@@ -226,12 +232,10 @@
             <?php foreach ($berita as $b) : ?>
                 <div class="col-lg-4">
 
+                    <div class="card mb-2" style="height: 50rem;">
 
+                        <img class="img-home-berita" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
 
-
-                    <div class="card mb-2" style="height: 40rem;">
-
-                        <img class="card-img-top" style="width: auto; height: 200px;" src="<?= base_url('assets/backend/img/berita_images/') . $b['image_berita'] ?>" alt="">
 
                         <div class="card-body mt-2">
                             <h6 class="mb-3 mt-2 text-center"><a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>"><?= $b['headline'] ?></a></h6>
@@ -254,7 +258,7 @@
                         </div>
 
                         <div class="card-footer text-body-secondary">
-                            <a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>" class="btn btn-sm btn-primary">Read More</a>
+                            <a href="<?= base_url('news/detail/') . $b['slug_berita'] ?>" style="color: blue;">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -266,9 +270,7 @@
         </div>
 
     </div>
-    <div class="appseo-service-vector" data-parallax='{"y" : 100, "rotateY":500}'>
-        <img src="assets/img/seo//shape/st.png" alt="">
-    </div>
+
 </section>
 <!-- News new 3 -->
 

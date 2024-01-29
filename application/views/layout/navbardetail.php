@@ -93,15 +93,6 @@
 
                                 </ul>
                             </li>
-                            <!-- <li class="dropdown">
-                                <a href="#">SIMANIS</a>
-                                <ul class="dropdown-menu clearfix">
-                                    <li><a href="#">SIMANIS</a></li>
-                                    <li><a href="http://103.154.113.243:8250/exam10/">EXAM 10</a></li>
-                                    <li><a href="http://103.154.113.242:86/exam11/">EXAM 11</a></li>
-                                    <li><a href="#">EXAM 12</a></li>
-                                </ul>
-                            </li> -->
                             <li><a href="<?= base_url('news') ?>">News</a></li>
                             <li><a href="https://ppdb.smam1ta.sch.id">PPDB</a></li>
                             <li class="dropdown">

@@ -101,11 +101,9 @@ class Berita_model extends CI_Model
             $config['max_size']  = 2048;
             $config['upload_path']  = './assets/backend/img/berita_images';
             $config['file_name']  =  time() . "_headline_news";
-            // $config['file_name']  =  $isbn . "_Book_cover";
             $this->load->library('upload', $config);
             if ($this->upload->do_upload('image_berita')) {
                 $image_berita_new = $this->upload->data('file_name');
-                // $foto_leader_new = $this->upload->data('file_name');
             } else {
                 echo $this->upload->display_errors();
                 $this->session->set_flashdata('message_error', 'Can`t Uploaded Because You not selected Image Cover Book');
@@ -120,26 +118,16 @@ class Berita_model extends CI_Model
         $slug_headline = url_title($headline, 'dash', true);
 
         $kategori = $this->input->post('kategori');
-        // var_dump($kategori);
-        // die;
+
 
         $new_str = "";
         for ($i = 0; $i < sizeof($kategori); $i++) {
             $new = $kategori[$i];
-            // var_dump($new);
-            // $str = implode(", ", $new);
+
             $new_str .= ", $new";
-            // var_dump($new_str);
-            // $this->db->set('genre', $new);
         }
         $new_str = substr($new_str, 1);
         $this->db->set('kategori', $new_str);
-        // var_dump($new_str);
-
-        // die;
-
-        // $slug = url_title(convert_accented_characters($judul), 'dash', true));
-        // $slug = url_title($judul, 'dash', true);
 
 
         $this->db->set('headline', $headline);
@@ -154,8 +142,6 @@ class Berita_model extends CI_Model
 
         $this->db->set('is_active', $is_active);
         $this->db->insert('berita');
-        // var_dump($this->db->last_query());
-        // die;
     }
 
     public function ubah()
@@ -184,8 +170,7 @@ class Berita_model extends CI_Model
             $this->load->library('upload', $config);
 
             if ($this->upload->do_upload('image_berita')) {
-                // $data = $this->upload->data();
-                // $image = $data['file_name'];
+
                 $image_berita_new = $this->upload->data('file_name');
                 $this->db->set('image_berita', $image_berita_new);
             } else {
@@ -218,20 +203,13 @@ class Berita_model extends CI_Model
         $this->db->set('is_active', $is_active);
         $this->db->where('id', $id);
         $this->db->update('berita');
-
-        // var_dump($this->db->last_query());
-        // die;
     }
 
     public function hapus()
     {
         $id = htmlspecialchars($this->input->post('id'));
-        // $this->db->set('is_active', 0);
-        // $this->db->where('id', $id);
-        // $this->db->update('berita');
+
         $this->db->where('id', $id);
         $this->db->delete('berita');
-        // var_dump($this->db->last_query());
-        // die;
     }
 }

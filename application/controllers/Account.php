@@ -7,11 +7,6 @@ class Account extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('Account_model');
-        // web_track_traffic();
-        // if (!$this->session->userdata('kode')) {
-        //     $this->session->set_flashdata('akun_error', 'Maaf Kamu Belum login. Login untuk mengakses fitur');
-        //     redirect('auth');
-        // }
     }
 
     public function index()

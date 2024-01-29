@@ -23,8 +23,7 @@ class Ismuba_be extends CI_Controller
         $data['role'] = $this->Role_model->get_role();
         $data['sarpras_profile'] = $this->Sarpras_model->get_sarpras_profile();
         $data['ismuba_profile'] = $this->Ismuba_model->get_ismuba_profile();
-        // var_dump($data['kurikulum_profile']);
-        // die;
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);
@@ -102,12 +101,10 @@ class Ismuba_be extends CI_Controller
 
     public function struktur()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Humas Struktur";
         $data['ismuba_struktur'] = $this->Ismuba_model->get_ismuba_struktur();
-        // var_dump($data['kurikulum_profile']);
-        // die;
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);

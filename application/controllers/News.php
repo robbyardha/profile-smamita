@@ -1,5 +1,6 @@
 <?php
 
+
 class News extends CI_Controller
 {
     public function __construct()
@@ -9,6 +10,8 @@ class News extends CI_Controller
         $this->load->model('Kategori_model');
         $this->load->model('Banner_model');
     }
+
+
     public function index()
     {
         $data['title'] = "News - SMAM1TA";
@@ -50,28 +53,53 @@ class News extends CI_Controller
 
         $data['mulai'] = $this->uri->segment(3);
         $data['berita'] = $this->Berita_model->get_berita_pagination($config['per_page'], $data['mulai']);
-        // var_dump($data['berita']);
-        // die();
+
         $keyword = $this->input->get('keyword');
         $kategori_get = $this->input->get('kategori');
+        $data['active_kategori'] = $kategori_get;
         $data['search_berita'] = $this->Berita_model->search_berita($keyword);
         $data['search_berita_by_kategori'] = $this->Berita_model->search_berita_by_kategori($kategori_get);
         $data['kategori'] = $this->Kategori_model->get_kategori();
         $data['recent_news'] = $this->Berita_model->sort_berita_date();
         $data['banner_showlist'] = $this->Banner_model->get_banner_header();
 
+
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('news_fe/index', $data);
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
+
+
     public function detail($slug_berita)
     {
 
+        $this->load->library('Simple_html_dom');
+
+
+
         $data['title'] = "Detail News - SMAM1TA";
         $data['berita_slug'] = $this->Berita_model->get_berita_slug($slug_berita);
+
+        // $gambar = $data['berita_slug']['konten'];
+
+        // $dom = new Simple_html_dom();
+        // $dom->load($gambar);
+
+
+        // $img_elements = $dom->find('img');
+
+        // var_dump($img_elements);
+
+        // if (!empty($img_elements)) {
+        //     $src_value = $img_elements[0]->src;
+        // } else {
+        //     $src_value =  'Tidak ada elemen <img> dalam teks HTML.';
+        // }
+
+        // var_dump($src_value);
+        // die;
 
         $data['title_url'] = $data['berita_slug']['headline'];
         $data['url_img'] = base_url('assets/backend/img/berita_images/') . $data['berita_slug']['image_berita'];
@@ -86,7 +114,6 @@ class News extends CI_Controller
         $data['recent_news'] = $this->Berita_model->sort_berita_date();
 
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('news_fe/detail', $data);
         $this->load->view('layout/footname', $data);
@@ -94,31 +121,33 @@ class News extends CI_Controller
     }
 
 
+
+
     public function kurikulum()
     {
         $data['title'] = "Information - Kurikulum";
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('information/teams', $data);
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
+
+
     public function gallery()
     {
         $data['title'] = "Information - Gallery";
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('information/gallery', $data);
         $this->load->view('layout/footname', $data);
         $this->load->view('layout/footer', $data);
     }
+
     public function announcement()
     {
         $data['title'] = "Information - Announcement";
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('information/teams', $data);
         $this->load->view('layout/footname', $data);

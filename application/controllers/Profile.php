@@ -15,15 +15,6 @@ class Profile extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
-
-        // --------------------------EXAMPLE TO MODIFICATION FILE
-        // $file = './assets/test/test.txt';
-        // $open = file_get_contents($file);
-        // $open .= "Yowmannnn" . "\n \n \n";
-        // file_put_contents($file, $open);
-        // die;
 
         $data['title'] = "Profile";
         $data['count_kategori'] = $this->Kategori_model->count_kategori();

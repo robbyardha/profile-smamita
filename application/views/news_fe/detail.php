@@ -7,9 +7,14 @@
     <br>
 </div>
 
+<style>
+    .content {
+        font-size: 12px;
+        font-style: italic;
+    }
+</style>
 
-<!-- Start of blog page section
-        ============================================= -->
+<!-- Start of blog page section ============================================= -->
 <section id="news-feed" class="news-feed-section">
     <div class="container">
         <div class="blog-feed-content">
@@ -19,7 +24,7 @@
                         <div class="blog-details-img">
                             <!-- size image 872 x 303 -->
                             <img class="img-custom-news" src="<?= base_url('assets/backend/img/berita_images/') . $berita_slug['image_berita'] ?>" alt="">
-                            <p class="text-center" style="font-size: 12px;"><?= $berita_slug['headline'] ?> </p>
+                            <p class="text-center content"><?= $berita_slug['headline'] ?> </p>
                         </div>
                         <div class="blog-details-text dia-headline">
                             <h2><?= $berita_slug['headline'] ?></h2>
@@ -99,5 +104,4 @@
         </div>
     </div>
 </section>
-<!-- End of blog section
-        ============================================= -->
+<!-- End of blog section ============================================= -->

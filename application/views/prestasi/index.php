@@ -10,35 +10,30 @@
 
 <!-- EXAMPLE -->
 <div class="main">
-    <h1>Prestasi</h1>
-    <ul class="cards">
-        <?php foreach ($prestasi as $sf) : ?>
-            <li class="cards_item">
-                <div class="card">
-                    <div class="card_image"><img class="sized-img-500x300" src="<?= base_url('assets/file_upload/kesiswaan/prestasi/') . $sf['foto'] ?>"></div>
-                    <div class="card_content">
-                        <h2 class="card_title"><?= $sf['nama_siswa'] ?></h2>
-                        <p class="card_text"><?= $sf['nama_prestasi'] ?> | <?= $sf['tingkat_prestasi'] ?></p>
-                    </div>
-                </div>
-            </li>
-        <?php endforeach ?>
 
-        <!-- <li class="cards_item">
-            <div class="card">
-                <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
-                <div class="card_content">
-                    <h2 class="card_title">Card Grid Layout</h2>
-                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                    <button class="btn card_btn">Read More</button>
-                </div>
-            </div>
-        </li> -->
-    </ul>
+
+    <?php if ($prestasi != null) : ?>
+        <h1>Prestasi</h1>
+        <ul class="cards">
+            <?php foreach ($prestasi as $sf) : ?>
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="sized-img-500x300" src="<?= base_url('assets/file_upload/kesiswaan/prestasi/') . $sf['foto'] ?>"></div>
+                        <div class="card_content">
+                            <h2 class="card_title"><?= $sf['nama_siswa'] ?></h2>
+                            <p class="card_text"><?= $sf['nama_prestasi'] ?> | <?= $sf['tingkat_prestasi'] ?></p>
+                        </div>
+                    </div>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    <?php else : ?>
+
+        <h1 class="my-5">Maaf Prestasi Masih Kosong</h1>
+    <?php endif; ?>
 </div>
 <style>
     /* Font */
-    /* @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700'); */
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
     /* Design */
@@ -54,12 +49,10 @@
 
     body {
         color: #272727;
-        /* font-family: 'Poppins', serif; */
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
         letter-spacing: 0;
-        /* padding: 1rem; */
     }
 
     .main {
@@ -134,8 +127,6 @@
 
     .card_content {
         padding: 1rem;
-        /* background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%); */
-        /* background: linear-gradient(#FF8B13 65%, #ECECEC 100%); */
         background: #FF8B13;
     }
 

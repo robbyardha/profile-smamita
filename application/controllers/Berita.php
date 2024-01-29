@@ -40,14 +40,7 @@ class Berita extends CI_Controller
             ]
         );
 
-        // $this->form_validation->set_rules(
-        //     'kategori',
-        //     'Kategori',
-        //     'required',
-        //     [
-        //         'required' => '%s is required!',
-        //     ]
-        // );
+
         $this->form_validation->set_rules(
             'konten',
             'Konten',
@@ -63,10 +56,7 @@ class Berita extends CI_Controller
             $data['title'] = "Berita Tambah";
             $data['role'] = $this->Role_model->get_role();
             $data['kategori'] = $this->Kategori_model->get_kategori();
-            // $data['genre'] = GENRE_DATA;
-            // var_dump($data['kategori']);
-            // var_dump($data['genre']['genre'][0]);
-            // die;
+
             $this->load->view('backend/layout/header', $data);
             $this->load->view('backend/layout/sidebar', $data);
             $this->load->view('backend/layout/navbar', $data);
@@ -90,14 +80,7 @@ class Berita extends CI_Controller
             ]
         );
 
-        // $this->form_validation->set_rules(
-        //     'kategori',
-        //     'Kategori',
-        //     'required',
-        //     [
-        //         'required' => '%s is required!',
-        //     ]
-        // );
+
         $this->form_validation->set_rules(
             'konten',
             'Konten',
@@ -112,9 +95,6 @@ class Berita extends CI_Controller
             $data['role'] = $this->Role_model->get_role();
             $data['kategori'] = $this->Kategori_model->get_kategori();
             $data['berita_id'] = $this->Berita_model->get_berita_id($id);
-            // $data['genre'] = GENRE_DATA;
-            // var_dump($data['buku_id']);
-            // die;
             $this->load->view('backend/layout/header', $data);
             $this->load->view('backend/layout/sidebar', $data);
             $this->load->view('backend/layout/navbar', $data);
@@ -133,9 +113,7 @@ class Berita extends CI_Controller
         $data['role'] = $this->Role_model->get_role();
         $data['kategori'] = $this->Kategori_model->get_kategori();
         $data['berita_id'] = $this->Berita_model->get_berita_id($id);
-        // $data['genre'] = GENRE_DATA;
-        // var_dump($data['buku_id']);
-        // die;
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);

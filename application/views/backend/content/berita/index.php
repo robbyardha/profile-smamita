@@ -53,10 +53,7 @@
                             <?php
                             $no = 1;
                             ?>
-                            <?php
-                            // var_dump($join_buku_new);
-                            // die;
-                            ?>
+
                             <?php foreach ($berita as $pn) : ?>
                                 <tr>
                                     <td><?= $no++ ?></td>
@@ -65,7 +62,6 @@
                                     <td><?= $pn['penulis'] ?></td>
                                     <td><?= $pn['tanggal_publikasi'] . " " . $pn['jam_publikasi'] ?></td>
                                     <td>
-                                        <!-- <a href="#" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detail_modal<?= $pn['id'] ?>">Details</a> -->
                                         <a href="<?= base_url('berita/detail/') . $pn['id'] ?>" class="btn btn-sm btn-info">Detail</a>
                                         <a href="<?= base_url('berita/ubah/') . $pn['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                         <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#hapus_modal<?= $pn['id'] ?>">Hapus</a>

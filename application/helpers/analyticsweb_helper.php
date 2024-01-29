@@ -82,12 +82,6 @@ function web_track_traffic()
 function analyze()
 {
     $lib_codeigniter = get_instance();
-    // $lib_codeigniter->db->select('*');
-    // $lib_codeigniter->db->from('analytics');
-    // $lib_codeigniter->db->order_by('created_date', 'DESC');
-    // $query = $lib_codeigniter->db->get();
-    // return $query->result_array();
-
 
 
     $query = "SELECT `tanggal`, COUNT(`tanggal`) AS total_tgl FROM `analytics` GROUP BY `tanggal`";

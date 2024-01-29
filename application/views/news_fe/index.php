@@ -60,8 +60,8 @@
                                                     ?>
                                                 </p>
                                             </div>
-                                            <div id="blog-read-more" style="margin-top: auto !important;" class="blog-read-more " style="color: #6c2b95;">
-                                                <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Read More</a>
+                                            <div id="blog-read-more" style="margin-top: auto !important; color: #6c2b95;" class="blog-read-more ">
+                                                <a class="blog-read-more mb-4" href="<?= base_url('news/detail/') . $b['slug_berita'] ?>">Baca Selengkapnya</a>
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +174,8 @@
                                 <h3 class="widget-title-2">Category</h3>
                                 <ul>
                                     <?php foreach ($kategori as $k) : ?>
-                                        <li><a href="news?kategori=<?= $k['kategori'] ?>"><?= $k['kategori'] ?></a></li>
+                                        <?php $style = ($active_kategori == $k['kategori']) ? 'style="color: blue;"' : ''; ?>
+                                        <li><a href="news?kategori=<?= $k['kategori'] ?>" <?= $style ?>><?= $k['kategori'] ?></a></li>
                                     <?php endforeach ?>
                                 </ul>
                             </div>

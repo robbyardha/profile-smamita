@@ -15,10 +15,10 @@ class Ekstrakurikuler_be extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Ekstrakurikuler";
         $data['ekstrakurikuler'] = $this->Ekstrakurikuler_model->get_ekstrakurikuler();
+
         $this->load->view('backend/layout/header', $data);
         $this->load->view('backend/layout/sidebar', $data);
         $this->load->view('backend/layout/navbar', $data);

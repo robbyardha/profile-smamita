@@ -16,8 +16,7 @@ class Kategori extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Kategori";
         $data['role'] = $this->Role_model->get_role();
         $data['kategori'] = $this->Kategori_model->get_kategori();

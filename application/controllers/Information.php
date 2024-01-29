@@ -17,7 +17,6 @@ class Information extends CI_Controller
         $data['title'] = "Information - Team";
         $data['get_team_all'] = $this->Teams_model->get_teams();
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('information/teams', $data);
         $this->load->view('layout/footname', $data);

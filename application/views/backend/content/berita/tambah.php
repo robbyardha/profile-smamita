@@ -28,21 +28,6 @@
                 </div>
             </div>
 
-            <?php
-            // $i = 0;
-            // var_dump(sizeof($genre['genre']));
-            // var_dump($genre['genre'][0]);
-            // die;
-            // foreach (GENRE_DATA as $g) {
-            //     var_dump($g[$i++]);
-            // }
-
-            // for ($i = 0; $i <= sizeof($genre['genre']); $i++) {
-            //     var_dump($i);
-            // $genre['genre'][$i];
-            // }
-            // die;
-            ?>
             <div class="card-body">
 
                 <form action="<?= base_url('berita/tambah') ?>" method="post" enctype="multipart/form-data">

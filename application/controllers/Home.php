@@ -16,13 +16,10 @@ class Home extends CI_Controller
         $data['config_direktur'] = $this->Configuration_model->get_direktur();
         $data['konfigurasi_profile'] = $this->Configuration_model->get_config();
         $data['visi_misi'] = $this->Configuration_model->get_visi_misi();
-
         $data['berita'] = $this->Berita_model->get_berita_limit_tiga();
 
 
-
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbar', $data);
         $this->load->view('home/index', $data);
         $this->load->view('layout/footname', $data);

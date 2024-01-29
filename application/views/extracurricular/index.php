@@ -10,30 +10,27 @@
 
 <!-- EXAMPLE -->
 <div class="main">
-    <h1>Ekstrakurikuler</h1>
-    <ul class="cards">
-        <?php foreach ($ekstrakurikuler as $sf) : ?>
-            <li class="cards_item">
-                <div class="card">
-                    <div class="card_image"><img class="sized-img-500x300" src="<?= base_url('assets/file_upload/kesiswaan/ekstrakurikuler/') . $sf['foto'] ?>"></div>
-                    <div class="card_content">
-                        <h2 class="card_title"><?= $sf['nama'] ?></h2>
-                    </div>
-                </div>
-            </li>
-        <?php endforeach ?>
 
-        <!-- <li class="cards_item">
-            <div class="card">
-                <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
-                <div class="card_content">
-                    <h2 class="card_title">Card Grid Layout</h2>
-                    <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                    <button class="btn card_btn">Read More</button>
-                </div>
-            </div>
-        </li> -->
-    </ul>
+    <?php if ($ekstrakurikuler != null) : ?>
+
+        <h1>Ekstrakurikuler</h1>
+        <ul class="cards">
+            <?php foreach ($ekstrakurikuler as $sf) : ?>
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img class="sized-img-500x300" src="<?= base_url('assets/file_upload/kesiswaan/ekstrakurikuler/') . $sf['foto'] ?>"></div>
+                        <div class="card_content">
+                            <h2 class="card_title"><?= $sf['nama'] ?></h2>
+                        </div>
+                    </div>
+                </li>
+            <?php endforeach ?>
+        <?php else : ?>
+            <h1 class="my-5">Maaf Ekstrakurikuler Masih Kosong</h1>
+
+        <?php endif; ?>
+
+        </ul>
 </div>
 <style>
     /* Font */

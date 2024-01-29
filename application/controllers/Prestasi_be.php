@@ -16,8 +16,7 @@ class Prestasi_be extends CI_Controller
 
     public function index()
     {
-        // var_dump($this->session->userdata());
-        // die;
+
         $data['title'] = "Prestasi Siswa";
         $data['prestasi'] = $this->Prestasi_model->get_prestasi();
         $data['ekstrakurikuler'] = $this->Ekstrakurikuler_model->get_ekstrakurikuler();

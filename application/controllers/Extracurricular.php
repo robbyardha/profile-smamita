@@ -11,8 +11,10 @@ class Extracurricular extends CI_Controller
     {
         $data['title'] = "Extracurricular";
         $data['ekstrakurikuler'] = $this->Ekstrakurikuler_model->get_ekstrakurikuler();
+
+
+
         $this->load->view('layout/header', $data);
-        // $this->load->view('layout/prebuilt', $data);
         $this->load->view('layout/navbardetail', $data);
         $this->load->view('extracurricular/index', $data);
         $this->load->view('layout/footname', $data);
